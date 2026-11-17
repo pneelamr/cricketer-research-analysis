@@ -78,6 +78,7 @@ The default page size is US Letter. The script needs the reportlab Python librar
 | Player | Files | Statistics as of |
 |---|---|---|
 | Sachin Tendulkar | [PDF](profiles/sachin-tendulkar.pdf) · [Markdown](profiles/sachin-tendulkar.md) | Final career figures; records checked 17 November 2026 |
+| Rahul Dravid | [PDF](profiles/rahul-dravid.pdf) · [Markdown](profiles/rahul-dravid.md) | Final career figures; records and post-playing roles checked 17 November 2026 |
 
 ## Testing
 
