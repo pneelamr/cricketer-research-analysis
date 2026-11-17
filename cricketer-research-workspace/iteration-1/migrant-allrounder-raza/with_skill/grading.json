@@ -1,0 +1,162 @@
+{
+  "expectations": [
+    {
+      "text": "The identity header states Sikandar Raza was born on 24 April 1986 in Sialkot, Pakistan, and plays for Zimbabwe",
+      "passed": true,
+      "evidence": "dossier.md has a '## Identity header' section (line 7). Line 10: '**Born:** 24 April 1986, Sialkot, Punjab, Pakistan (age 40)'. Line 11: '**Country / teams:** Zimbabwe (2013–present)'."
+    },
+    {
+      "text": "The dossier explains his path from Pakistan via Scotland to Zimbabwe, matching the user's stated angle",
+      "passed": true,
+      "evidence": "Career arc bullets 'Sialkot to Harare' (PAF College, failed eyesight test, family emigrated to Zimbabwe 2002/03), 'A student cricketer, not a prospect' (BSc at Glasgow Caledonian, Weirs CC in Scotland), 'Domestic career while ineligible' and 'Citizenship and debut' (citizenship Sept 2011, debut 2013 at 27). Off-field section opens with 'The migration story, for your piece' and the parameters table adds an 'Eligibility path' row. Line 3 explicitly frames the dossier around the user's angle."
+    },
+    {
+      "text": "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+      "passed": true,
+      "evidence": "Two distinct tables under '## Career statistics': '**Batting**' (lines 22-27) with rows Tests 22/42/1,434/127/34.14/56.13/1/11, ODIs 162/153/4,824/141/37.39/85.53/7/27, T20Is 147/142/3,369/133*/26.11/136.51/2/17; '**Bowling**' (lines 31-36) with rows Tests 3,335 balls/40 wkts/7/113/44.55/3.20, ODIs 5,468/101/4/55/44.00/4.87, T20Is 2,496/116/5/18/25.41/7.08. List A and T20 (all) rows are absent and the dossier says so."
+    },
+    {
+      "text": "Franchise cricket is covered, naming at least two leagues or teams he has played for",
+      "passed": true,
+      "evidence": "Line 11 names Chittagong Vikings (BPL), Trinbago Knight Riders (CPL), Lahore Qalandars (PSL 2023–25), Punjab Kings (IPL 2023–24), Dambulla Sixers (LPL), Dubai Capitals (ILT20), Northamptonshire and Worcestershire (Blast), Paarl Royals (SA20 2026), Chitwan Rhinos (NPL 2026), Montreal Tigers, Tshwane Spartans. Career arc and Recent form sections detail the 2025 PSL final, SA20 2026 and the current NPL stint."
+    },
+    {
+      "text": "Statistics carry an explicit as-of date and a named source",
+      "passed": true,
+      "evidence": "Line 16: '**Stats as of:** 12 November 2026, ESPNcricinfo figures as carried by Wikipedia's infobox, cross-checked on 16 November 2026 against cricket.com.au (identical figures).' Table notes (lines 40-45) repeat the sourcing and name what could not be fetched."
+    },
+    {
+      "text": "The dossier records his Zimbabwe T20I captaincy",
+      "passed": true,
+      "evidence": "Line 15: 'Zimbabwe T20I captain (appointed late 2023); stand-in ODI captain September–October 2026'. Line 137 'Captaincy' paragraph: 'T20I captain since late 2023 (Craig Ervine kept the ODI and Test captaincy...)'. Parameters table Role row: 'T20I captain'. Also stand-in T20I captaincy in 2015 and captaining the 2026 T20 World Cup side."
+    },
+    {
+      "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+      "passed": true,
+      "evidence": "'## Attribute ratings (out of 10)' (lines 84-96) is a three-column table (Dimension | Score | Why) with seven rows: Batting 7/10, Bowling 6/10, Match impact and balance 8/10, Versatility 7/10, Fielding 6/10, Durability 8/10, Leadership 6/10. Each row has a one-line justification citing figures (e.g. Bowling: 'Elite T20I returns (116 wickets at 25.41, economy 7.08) but fifth-bowler figures in ODIs and Tests (averages of 44 in both)'). An anchored scale is stated above the table."
+    },
+    {
+      "text": "A numbered sources list gives at least three URLs",
+      "passed": true,
+      "evidence": "'## Sources' (lines 147-175) is a numbered list 1-25, every entry carrying at least one URL (some carry two or three); well over 30 URLs in total, e.g. https://en.wikipedia.org/wiki/Sikandar_Raza, https://www.cricket.com.au/players/CA:1186/sikandar-raza, https://www.aljazeera.com/sports/2024/3/4/sikandar-raza-zimbabwe-pakistan-cricketer-icc-player-of-the-year-award-t20-world-cup."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "total_tokens": 139391,
+    "duration_ms": 22967,
+    "total_duration_seconds": 23.0,
+    "note": "Run was interrupted five times by usage limits; figures cover the final resumed segment only."
+  },
+  "claims": [
+    {
+      "claim": "dossier.md has all ten skill sections in order and 25 numbered sources",
+      "type": "process",
+      "verified": true,
+      "evidence": "Ten H2 sections counted: Identity header, Career statistics, Career arc, Playing style and technical profile, Overall parameters, Attribute ratings, Records and milestones, Recent form and current context, Off-field and context, Sources. Sources list runs 1-25."
+    },
+    {
+      "claim": "Bowling strike rates are derived from balls divided by wickets",
+      "type": "factual",
+      "verified": true,
+      "evidence": "3335/40 = 83.4, 5468/101 = 54.1, 2496/116 = 21.5, 5660/83 = 68.2; all match the SR column."
+    },
+    {
+      "claim": "137 international catches, 331 internationals, roughly one catch every 2.4 matches",
+      "type": "factual",
+      "verified": true,
+      "evidence": "7+64+66 = 137; 22+162+147 = 331; 331/137 = 2.42. Internally consistent."
+    },
+    {
+      "claim": "Statistics were cross-checked against cricket.com.au and the figures were identical",
+      "type": "process",
+      "verified": false,
+      "evidence": "Unverifiable: transcript.md is a final summary only, with no tool log. Both runs independently report the same figures from the same Wikipedia infobox, which shows consistency, not independent confirmation."
+    },
+    {
+      "claim": "Zimbabwean citizenship was granted in September 2011 (stated as fact at lines 52, 76 and 135)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Not externally verifiable here. The without_skill run found a Herald report (c. Nov 2011) of a still-open Home Affairs application and Raza's April 2013 interview saying he had been told to expect a further four-year wait, and marks the date [conflict]. The with_skill dossier presents it without caveat, which is a weaker treatment of the point most central to the user's angle."
+    },
+    {
+      "claim": "No direct quote from Raza on choosing Zimbabwe over Pakistan was found",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Honest gap statement at line 135, but it is a real gap: the without_skill run sourced 'I am a born Pakistani and a product of Zimbabwe Cricket. I will only and ever represent Zimbabwe' to Express Tribune and CricketPakistan, 4 Aug 2024."
+    },
+    {
+      "claim": "The 2022 T20 World Cup win over Pakistan in Perth could not be verified and is omitted from the records",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Line 117 flags this. For a piece about playing for a country other than one's birth country, the match against the birth country is the most relevant single fixture; its omission is a material gap caused by the interrupted run."
+    },
+    {
+      "claim": "ICC Men's T20I Cricketer of the Year nominee three years running (2022-24)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Consistent with the three ICC URLs listed at source 14 and with the without_skill run's independent findings, but not externally verified in this grading."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "First-class highest score: infobox 226 vs Wikipedia body text 146; left as '226 (unconfirmed)'",
+      "T20I best bowling 5/18 taken over cricket.com.au's 4/8; the match for 5/18 not confirmed",
+      "Family's move to Zimbabwe: 2002 (Wikipedia) vs 2003 (Al Jazeera, Zimbabwe Independent); reason undocumented",
+      "T20I captaincy appointment 'late 2023' inferred from a URL timestamp and a headline, article not read",
+      "ICC No. 1 ODI all-rounder Sept 2025 rests on a Wisden headline only; current Nov 2026 rankings unconfirmed",
+      "'Still stands' status of cited Zimbabwe records not re-checked",
+      "2026 T20 World Cup final placing, Australia ODI series results, UAE tri-series final, Worcestershire Blast returns, MLC Seattle Orcas stint all unverified",
+      "Zimbabwe cap numbers from Wikipedia infobox only"
+    ],
+    "needs_review": [
+      "2022 T20 World Cup win over Pakistan (Perth): verification search cut off; omitted from records",
+      "List A and T20 (all matches) rows missing from statistics tables",
+      "Captaincy win-loss record not obtained; Leadership rating rests on documented results only",
+      "ICC T20I Team of the Year year(s) unconfirmed",
+      "Roughly 20 planned verification searches never executed due to usage-limit interruptions"
+    ],
+    "workarounds": [
+      "ESPNcricinfo and HowSTAT returned 403, Cricbuzz blocked the crawler; statistics taken from Wikipedia's Cricinfo-credited infobox and cross-checked against cricket.com.au",
+      "ICC rankings pages and Wikipedia captains list blocked by the permission classifier; a curl attempt denied and not retried",
+      "Discarded Wikipedia body-text errors (youngest T20I fifty claim; 5 Nov 2013 T20I debut) in favour of infobox/cricket.com.au",
+      "Did not save the profiles/sikandar-raza.md copy the skill calls for, per task instructions",
+      "No inline chart tool used; ratings table stands alone"
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "A numbered sources list gives at least three URLs",
+        "reason": "The assertion text says 'numbered' but the grading instruction accepts a bulleted list; the without_skill run passes only because of the latter. Decide whether numbering matters (it does if the body cross-references sources by number) and align the two."
+      },
+      {
+        "assertion": "The dossier explains his path from Pakistan via Scotland to Zimbabwe, matching the user's stated angle",
+        "reason": "The phrasing misstates the chronology: the family moved to Zimbabwe first (2002/03), he then studied in Scotland and returned. Both dossiers give the correct order; one that mirrored the assertion's order would be wrong. Rephrase as 'Pakistan, Zimbabwe and Scotland' or state the correct sequence."
+      },
+      {
+        "assertion": "Franchise cricket is covered, naming at least two leagues or teams he has played for",
+        "reason": "Trivially satisfied by any Raza dossier (PSL and IPL). A more discriminating version would require the most recent engagement as of the run date; the without_skill dossier omits the SA20 2026 and NPL 2026 stints and lists Worcestershire 2026 Blast as a 'current role' in November, which this assertion cannot catch."
+      },
+      {
+        "reason": "No assertion checks the fixture most relevant to the user's angle: Zimbabwe's 2022 T20 World Cup win over Pakistan in Perth. The with_skill run omitted it as unverified while the without_skill run covered it with figures and a date. An assertion such as 'mentions the 2022 T20 World Cup win over Pakistan in Perth' would discriminate on angle fit."
+      },
+      {
+        "reason": "No assertion checks for a sourced identity quote from Raza about representing Zimbabwe rather than Pakistan. The with_skill dossier says none was found; the without_skill dossier has several sourced quotes. For a journalist's migration-angle piece this is a major quality difference that the current set does not measure, so the structurally compliant run scores 8/8 while being weaker on the brief."
+      },
+      {
+        "reason": "No assertion checks for List A and T20 (all-matches) rows, which the skill's table template appears to expect (the dossier says they 'could not be obtained'). Both runs lack them; if the skill requires them, an assertion should test for it."
+      },
+      {
+        "assertion": "The identity header states Sikandar Raza was born on 24 April 1986 in Sialkot, Pakistan, and plays for Zimbabwe",
+        "reason": "Ambiguous whether a section literally titled 'Identity header' is required. The without_skill run has the same facts in a 'Vital facts' table and was passed on content; state whether the label matters."
+      }
+    ],
+    "overall": "The structural assertions (separate tables, ratings table) discriminate between the runs, but the content-depth differences on the user's actual angle (citizenship-date caveats, identity quotes, the Perth 2022 match, current franchise status) run the other way and go unmeasured. Add two or three angle-specific content checks."
+  }
+}

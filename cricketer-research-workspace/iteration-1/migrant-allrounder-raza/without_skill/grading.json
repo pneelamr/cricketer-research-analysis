@@ -1,0 +1,153 @@
+{
+  "expectations": [
+    {
+      "text": "The identity header states Sikandar Raza was born on 24 April 1986 in Sialkot, Pakistan, and plays for Zimbabwe",
+      "passed": true,
+      "evidence": "No section is labelled 'Identity header'; the equivalent is the '## 2. Vital facts' table near the top. Line 22: 'Born | 24 April 1986, Sialkot, Punjab, Pakistan | solid'. Line 33: 'Current roles | Zimbabwe T20I captain; ...'. Line 32: 'International debut | ODI, 3 May 2013 v Bangladesh (116th Zimbabwe ODI cap)'. Passed on content; the section label differs."
+    },
+    {
+      "text": "The dossier explains his path from Pakistan via Scotland to Zimbabwe, matching the user's stated angle",
+      "passed": true,
+      "evidence": "Section 1 summarises the sequence (Sialkot birth, PAF pilot ambition, failed eyesight test, emigration to Zimbabwe c. 2002, software engineering at Glasgow, Scottish club cricket, return to Harare, 2009 trial year). Section 3 timeline dates each step. Section 4 'The migration and citizenship story (the core of your piece)' covers the eligibility wait, the dual-nationality question and the Antum Naqvi parallel. Section 14 lists angles for the piece."
+    },
+    {
+      "text": "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+      "passed": false,
+      "evidence": "Section 7 'Career record' has a single combined table (lines 118-123) with columns 'Format | M | Runs | Avg | 100/50 | HS | Wkts | Bowl avg | BBI | 5WI'. Batting and bowling figures share one table; there is no separate bowling table or clearly separated bowling block. The combined table does hold Tests, ODIs and T20Is rows with numbers, but the assertion requires two distinct tables."
+    },
+    {
+      "text": "Franchise cricket is covered, naming at least two leagues or teams he has played for",
+      "passed": true,
+      "evidence": "Section 10 'Franchise and overseas career' (line 161) names Karachi Kings and Lahore Qalandars (PSL), Punjab Kings (IPL), Montreal Tigers (GT20 Canada), Tshwane Spartans (MSL), Chittagong Vikings and Rangpur Riders (BPL), Trinbago Knight Riders and St Lucia Kings (CPL), Dubai Capitals (ILT20), Dambulla Sixers (LPL), Northamptonshire, Manchester Originals, Worcestershire Rapids. Note: omits Paarl Royals (SA20 2026) and Chitwan Rhinos (NPL, Nov 2026), which the other run documents."
+    },
+    {
+      "text": "Statistics carry an explicit as-of date and a named source",
+      "passed": true,
+      "evidence": "Line 116: 'International figures below are the Wikipedia infobox numbers sourced to ESPNcricinfo, stated as of 12 November 2026.' Line 125 adds an ICC cross-check dated 19 July 2026. Section 15 item 9 repeats: 'ESPNcricinfo-sourced numbers dated 12 November 2026'."
+    },
+    {
+      "text": "The dossier records his Zimbabwe T20I captaincy",
+      "passed": true,
+      "evidence": "Section 9 'Captaincy' (line 153): 'Appointed T20I captain November 2023 after the 3-2 home loss to Namibia; Craig Ervine retained Tests and ODIs.' Line 66: '10 July 2026 ZC confirms Richard Ngarava as Test and ODI captain..., Raza retained as T20I captain.' Vital facts line 33: 'Zimbabwe T20I captain'. Source list includes the ESPNcricinfo Nov 2023 appointment story."
+    },
+    {
+      "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+      "passed": false,
+      "evidence": "No ratings table exists anywhere in the 16 sections. The only tables are 'Vital facts' (item/detail/confidence) and the combined career-record table. Strengths are discussed only in prose (sections 8, 14), which does not satisfy the assertion."
+    },
+    {
+      "text": "A numbered sources list gives at least three URLs",
+      "passed": true,
+      "evidence": "Section 16 'Sources' (lines 229-272) is a bulleted list, not numbered, split into 'Retrieved and used directly' (10 entries, 11 URLs) and 'Located via search' (29 entries, 29 URLs): 40 URLs in total. Passed under the grading instruction to count URLs in a numbered or bulleted list; the literal 'numbered' requirement is not met."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "timing": {
+    "total_tokens": 137145,
+    "duration_ms": 16478,
+    "total_duration_seconds": 16.5,
+    "note": "Run was interrupted five times by usage limits; figures cover the final resumed segment only."
+  },
+  "claims": [
+    {
+      "claim": "dossier.md is about 36.7 KB with 16 sections",
+      "type": "process",
+      "verified": true,
+      "evidence": "File is 36,710 bytes; H2 sections numbered 1 through 16."
+    },
+    {
+      "claim": "Total caps as of mid-November 2026 are 331; the ICC's 314 on 19 July 2026 implies a further 6 ODIs and 11 T20Is",
+      "type": "factual",
+      "verified": true,
+      "evidence": "22+162+147 = 331; 162-156 = 6; 147-136 = 11. Arithmetic is consistent."
+    },
+    {
+      "claim": "Oldest T20I centurion at 40 years 188 days (106* v Afghanistan, Sharjah, 29/30 October 2026)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "24 April 1986 plus 40 years 188 days is 29 October 2026, matching the stated match date. Internally consistent; sourced to Outlook India. External truth not checked here."
+    },
+    {
+      "claim": "Section 15 flags every conflict or gap",
+      "type": "quality",
+      "verified": false,
+      "evidence": "Section 15 lists 14 items and is thorough, but Section 10's Karachi Kings (PSL 2018-19), Rangpur Riders, St Lucia Kings and Manchester Originals carry no specific source, and the dossier does not flag that it omits the SA20 2026 (Paarl Royals) and NPL 2026 (Chitwan Rhinos) stints, which the other run documents with dated South African and Nepali press URLs."
+    },
+    {
+      "claim": "Current roles: Zimbabwe T20I captain; Lahore Qalandars (PSL); Worcestershire Rapids (2026 Blast)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Stale for a 16 November 2026 dossier: the Blast ended in summer 2026 and the other run documents a Chitwan Rhinos (NPL) captaincy from 2 November 2026. Not externally verified here."
+    },
+    {
+      "claim": "PSL 2025 final opponent (Quetta Gladiators) and Raza's 22* off 7 are from memory",
+      "type": "process",
+      "verified": true,
+      "evidence": "Honestly tagged [memory] at lines 62 and 222. The other run sources both to Al Jazeera 25 May 2025 and a Wisden headline, so the facts are likely right but were not verified by this run."
+    },
+    {
+      "claim": "3/25 v Pakistan, Perth, 27 October 2022, one-run win, Player of the Match",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Tagged [solid] but no source URL in Section 16 is specifically about the match (the Arab News/BBC reprint covers his journey). Not externally verifiable here; consistent with widely reported accounts but unconfirmed in this grading."
+    },
+    {
+      "claim": "Citizenship date September 2011 is contested; lean towards 'resolved shortly before the May 2013 debut'",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Rests on Herald, The Standard and Sunday News pieces that the run says returned headlines only or were read as snippets. The reasoning is explicit and the uncertainty is flagged, which is appropriate, but the underlying sources were not fully read."
+    }
+  ],
+  "user_notes_summary": {
+    "source": "No user_notes.md was produced by this run; items below are taken from dossier.md Section 15 'Things I could not verify, and conflicts in the record'.",
+    "uncertainties": [
+      "Year of emigration: 2002 vs 2003 vs 2001",
+      "Citizenship date: September 2011 vs resolved shortly before May 2013 debut",
+      "Whether he renounced Pakistani citizenship: not found",
+      "Why the family moved to Zimbabwe: not found",
+      "PAF College duration/age conflict",
+      "2009 'one-year trial' vs April 2007 first-class debut",
+      "T20I debut 11 May 2013 vs 5 November 2013",
+      "Family names from aggregator sites disagree",
+      "2026 T20 World Cup v South Africa venue unconfirmed"
+    ],
+    "needs_review": [
+      "PSL 2025 final opponent and 22* off 7 are from memory",
+      "Mr Bean / Mnangagwa tweet after Perth 2022 is from memory",
+      "Several key pieces blocked or headline-only: ESPNcricinfo profile and features, Zimbabwe Independent op-ed, Chronicle piece, Herald 2011 eligibility story, The Standard 2013 and 2018 interviews, Sunday News interview, Dhaka Tribune and TNS interviews",
+      "Peer comparisons in Section 14 marked [memory, verify each]"
+    ],
+    "workarounds": [
+      "Statistics taken from the Wikipedia infobox (ESPNcricinfo-sourced) with an ICC July 2026 cap count shown alongside, because ESPNcricinfo blocked fetching",
+      "Confidence tags ([solid]/[single]/[conflict]/[memory]) used throughout in place of a verification pass that was cut short by usage limits"
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "A numbered sources list gives at least three URLs",
+        "reason": "This run's list is bulleted and passes only because the grading instruction accepts bulleted lists. Align the assertion text with the rubric."
+      },
+      {
+        "assertion": "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+        "reason": "Fails here on format alone: the combined table holds all the same numbers. If the intent is to test completeness of the statistics (e.g. presence of SR, economy, balls, List A and T20 rows), say so; if the intent is the skill's two-table layout, the assertion is working as designed."
+      },
+      {
+        "assertion": "The identity header states Sikandar Raza was born on 24 April 1986 in Sialkot, Pakistan, and plays for Zimbabwe",
+        "reason": "Passed on content from a 'Vital facts' table since no section is titled 'Identity header'. State whether the section label is required."
+      },
+      {
+        "reason": "No assertion rewards what this run does better than the skill run on the user's brief: sourced identity quotes (Express Tribune/CricketPakistan 4 Aug 2024), the Perth 2022 win over Pakistan with figures, a critical treatment of the September 2011 citizenship date, and a list of comparable migrant cricketers and people to interview. Add two or three angle-specific content checks so a structurally compliant but thinner dossier does not outscore a richer one."
+      },
+      {
+        "reason": "No assertion checks recency of franchise/current-status information. This run lists Worcestershire 2026 Blast as a current role in November 2026 and omits the SA20 and NPL 2026 stints; the franchise assertion ('at least two leagues or teams') cannot catch that."
+      }
+    ],
+    "overall": "The two failures are both format requirements the skill enforces (separate tables, ratings table). On the user's stated angle this dossier is substantively stronger than the with_skill one in several respects, which the assertion set does not measure."
+  }
+}

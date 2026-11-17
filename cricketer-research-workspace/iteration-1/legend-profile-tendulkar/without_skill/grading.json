@@ -1,0 +1,158 @@
+{
+  "expectations": [
+    {
+      "text": "The identity header states Tendulkar was born on 24 April 1973 in Mumbai (Bombay)",
+      "passed": true,
+      "evidence": "dossier.md '## 1. At a glance' table (the document's identity header): '| Born | 24 April 1973, Bombay (Mumbai), Maharashtra, India |'"
+    },
+    {
+      "text": "The Test batting row shows 200 matches and 15,921 runs",
+      "passed": true,
+      "evidence": "Section 4 'International' table row: '| Tests | 200 | 329 | 15,921 | 53.78 | ~54 | 51 | 68 | 248* | 46 | 3/10 | 115 |'"
+    },
+    {
+      "text": "The ODI batting row shows 463 matches and 18,426 runs",
+      "passed": true,
+      "evidence": "Section 4 'International' table row: '| ODIs | 463 | 452 | 18,426 | 44.83 | ~86 | 49 | 96 | 200* | 154 | 5/32 | 140 |'"
+    },
+    {
+      "text": "The dossier states 100 international centuries, broken down as 51 in Tests and 49 in ODIs",
+      "passed": true,
+      "evidence": "International table 100s column: Tests 51, ODIs 49, T20Is 0, Total 100. At a glance: '664 matches, 34,357 runs, 100 centuries, 201 wickets'; Records: 'most Test centuries (51)', 'Most ODI centuries (49)', 'most international centuries (100)'."
+    },
+    {
+      "text": "The dossier states he retired from international cricket in November 2013 after his 200th Test against West Indies in Mumbai",
+      "passed": true,
+      "evidence": "Phase 5: '10 October 2013: announced he would retire after the two-Test home series v West Indies, which the BCCI scheduled in Kolkata and Mumbai so his 200th Test would be at the Wankhede.' and '14–16 November 2013: 200th Test. Scored 74 in his final innings'. At a glance: 'International span | 15 November 1989 to 16 November 2013'; 'Current status | Retired'."
+    },
+    {
+      "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+      "passed": false,
+      "evidence": "No ratings table exists. grep for '/10' or 'out of 10' matches only the bowling best figure '3/10' in the stats table. Section 7 'Batting style and technique' is prose bullets and section 13 'Assessment' is narrative prose; neither assigns numeric scores to dimensions. A prose discussion of strengths does not satisfy this assertion."
+    },
+    {
+      "text": "Statistics are labelled as final career figures or carry an explicit as-of date with a named source",
+      "passed": true,
+      "evidence": "Document preamble, immediately under the title: 'Compiled 16 November 2026. Figures are from ESPNcricinfo and Wikipedia unless noted; 2023–2026 items were checked against news reports listed in the Sources section.' This gives an explicit date and named sources that govern all figures in the document. Records lists additionally say 'as of November 2026'. Note this is weaker than a stats-specific label: the section 4 statistics tables themselves carry no 'final career figures' wording or as-of line, and 'Compiled' is a document date rather than a data-currency date. Passed on the coordinator's criterion (explicit date + named source); see eval_feedback."
+    },
+    {
+      "text": "A numbered sources list gives at least three URLs",
+      "passed": true,
+      "evidence": "Section 14 'Sources and confidence notes' is a bulleted (not numbered) list; the coordinator allows bulleted. The bulleted lines contain exactly 3 URLs (https://sachintendulkar.com/news/, https://www.bcci.tv/news/article/sachin-tendulkar-honoured-with-lifetime-achievement-award-at-bcci-naman-awards-2025, https://www.outlookindia.com/sports/cricket/sachin-tendulkar-brand-value-kroll-2025-rankings), with two further URLs (ESPNcricinfo player page, Wikipedia article) in the section's prose intro — 5 in the section overall. Threshold of three met, but only just, and most of the ~20 bulleted entries name outlets (e.g. 'Scroll, Gulf News, Outlook India') without any link."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.875
+  },
+  "timing": {
+    "total_tokens": 122511,
+    "duration_ms": 227033,
+    "total_duration_seconds": 227.0,
+    "note": "Run was interrupted twice by usage-limit resets; figures cover the final resumed segment only."
+  },
+  "claims": [
+    {
+      "claim": "Total row: 664 matches, 782 innings, 34,357 runs, 100 centuries, 164 fifties, 201 wickets, 256 catches",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Row sums check: 200+463+1 = 664; 329+452+1 = 782; 15,921+18,426+10 = 34,357; 51+49 = 100; 68+96 = 164; 46+154+1 = 201; 115+140+1 = 256. Internally consistent (the with_skill run gives 255 catches, which is wrong against the same components)."
+    },
+    {
+      "claim": "Most fourth-innings Test runs: passed by Root in 2024",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Cannot verify without web access. The with_skill run cites an Express Tribune report dating this to January 2026. The two runs conflict; flagged, not resolved."
+    },
+    {
+      "claim": "Padma Shri (1998)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Cannot verify here. The with_skill run gives 1999. Conflicting between runs; flagged."
+    },
+    {
+      "claim": "Career statistics, debut dates, captaincy figures and the honours list were cross-checked between ESPNcricinfo and Wikipedia",
+      "type": "process",
+      "verified": false,
+      "evidence": "transcript.md is a 1,050-character final summary with no tool-call log, so the cross-check cannot be confirmed. The headline figures do match the with_skill run exactly (200/15,921/53.78/51; 463/18,426/44.83/49; captaincy 25: 4-9-12 and 73: 23-43-1-6), which is consistent with the claim but not proof of it."
+    },
+    {
+      "claim": "No source refused a fetch",
+      "type": "process",
+      "verified": false,
+      "evidence": "Stated in transcript.md. The with_skill run, in the same window, reports HTTP 403 from every ESPNcricinfo and HowSTAT URL. Either this run did not actually fetch the ESPNcricinfo page it lists as its primary source, or it used a different path; the transcript gives no fetch log to tell. Unverifiable and in tension with the other run."
+    },
+    {
+      "claim": "First-class bowling 71 wickets; List A bowling 201 wickets",
+      "type": "factual",
+      "verified": false,
+      "evidence": "The with_skill run omitted FC/List A bowling entirely because it could not confirm them from a fetchable source. These figures are plausible but unverified here."
+    },
+    {
+      "claim": "Test SR ~54 and ODI SR ~86 (approximate)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Consistent with the exact values 54.08 and 86.23 given in the with_skill run (balls faced 29,437 and 21,367)."
+    },
+    {
+      "claim": "First Test century 119* at Old Trafford, 14 August 1990",
+      "type": "factual",
+      "verified": true,
+      "evidence": "14 August 1990 was the final day of the Old Trafford Test (9–14 August), on which the innings was completed; the with_skill run uses the match start date 9 August. Both conventions appear in reference sources."
+    },
+    {
+      "claim": "Dossier is ~4,200 words in 14 sections",
+      "type": "factual",
+      "verified": true,
+      "evidence": "dossier.md is 25,481 characters with 14 numbered '##' sections (At a glance through Sources and confidence notes)."
+    },
+    {
+      "claim": "Where sources disagree, the disagreement is flagged rather than resolved by guesswork",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Section 14 'Confidence flags' lists six items (Root/Kohli currency, 2028 England tour date, US$170m net worth, Recykal amount, Arjun LSG terms, T20I wicket identity) with the reasoning for each. The claim is justified for those items; however the 2024 vs 2026 fourth-innings date and the Padma Shri year are stated without any flag."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "No user_notes.md was produced by this run; the following are taken from the dossier's own 'Confidence flags' and the transcript.",
+      "Root's 14,278 Test runs and Kohli's 55 ODI / 86 international centuries are the latest found and may have moved in recent weeks",
+      "England's 2028 Test tour of India comes from a single secondary source",
+      "US$170m net-worth figure is unattributed in its source; the Kroll US$125.9m brand value is the defensible number",
+      "Recykal investment is a company press release with no amount disclosed",
+      "Arjun Tendulkar's LSG transfer terms differ between the club statement (₹30 lakh trade) and press reports (swap deal)",
+      "Identity of his only T20I wicket (Justin Kemp) rests on two secondary sources; scorecard not read"
+    ],
+    "needs_review": [
+      "England-in-India 2028 date against the ICC FTP / board announcements",
+      "Root and Kohli current tallies before relying on 'records under threat' section"
+    ],
+    "workarounds": [
+      "Work was interrupted twice by usage-limit resets; interrupted requests were re-issued once and succeeded (per transcript)"
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Statistics are labelled as final career figures or carry an explicit as-of date with a named source",
+        "reason": "This run passed on the strength of a single preamble sentence ('Compiled 16 November 2026. Figures are from ESPNcricinfo and Wikipedia unless noted') with no label on the statistics table itself. If the intended behaviour is the skill's 'Stats as of:' / 'Final career figures' line in the identity header, the assertion should say so explicitly (location and wording), otherwise it does not discriminate between skill and no-skill output."
+      },
+      {
+        "assertion": "A numbered sources list gives at least three URLs",
+        "reason": "Passed with exactly three URLs in a bulleted list where most entries cite outlets by name only. The bar is low enough that it does not reward the skill's 20-entry, 43-URL, access-dated list over this. Consider a higher minimum, requiring the list to be numbered as the assertion text says, or requiring a URL for the primary stats source."
+      },
+      {
+        "reason": "Assertions 1–5 are memorised-fact checks that this no-skill run passed in full. They catch hallucination but not skill adherence; the only assertion that separated this run from the with_skill run was the ratings table."
+      },
+      {
+        "reason": "Two facts in this dossier conflict with the with_skill dossier (Root fourth-innings record: 2024 vs January 2026; Padma Shri: 1998 vs 1999) and neither is flagged. No assertion probes post-2013 record-status accuracy, so the eval cannot tell which run is right. An assertion anchoring one verifiable post-retirement fact would be discriminating."
+      },
+      {
+        "reason": "This run's transcript is a one-paragraph summary with no tool-call log, so process claims ('cross-checked between ESPNcricinfo and Wikipedia', 'no source refused a fetch') cannot be verified. If the eval harness can preserve the tool log in transcript.md, process assertions become gradeable."
+      }
+    ],
+    "overall": "Seven of eight assertions pass; the only failure is the absence of an attribute ratings table, which is the one skill-specific structural requirement in the set. The dossier is substantively strong (internally consistent totals, explicit confidence flags, extensive 2024–2026 coverage) but the sources list is thin on links and the stats carry only a document-level compile date rather than a 'final career figures' label. The assertion set mostly measures factual recall rather than skill adherence."
+  }
+}

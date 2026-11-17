@@ -1,0 +1,14 @@
+{
+  "eval_name": "womens-allrounder-perry",
+  "prompt": "do a full profile on ellyse perry, i want stats across all formats plus the wbbl",
+  "assertions": [
+    "The dossier identifies Ellyse Perry as an Australian women's all-rounder born on 3 November 1990 in Sydney",
+    "The career arc mentions she also played football for Australia, including the 2011 Women's World Cup",
+    "The dossier states she made her Australian cricket debut in 2007 at age 16",
+    "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+    "WBBL statistics or a dedicated WBBL section with figures is included, as the user asked",
+    "Statistics carry an explicit as-of date and a named source",
+    "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+    "A numbered sources list gives at least three URLs"
+  ]
+}

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: head-to-head-kohli-smith
+expected_outcome: |
+  A comparison document that identifies Steven Smith of Australia (not Graeme Smith), presents side-by-side statistics tables per format with both players' figures from the same date-stamped source, rates both on the same attribute dimensions, discusses the context that cuts both ways (era, home/away, attacks faced), and gives a direct verdict on who is the better Test batter with reasoning and the conditions under which it would flip, plus a numbered source list.

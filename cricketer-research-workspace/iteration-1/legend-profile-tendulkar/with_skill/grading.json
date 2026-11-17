@@ -1,0 +1,166 @@
+{
+  "expectations": [
+    {
+      "text": "The identity header states Tendulkar was born on 24 April 1973 in Mumbai (Bombay)",
+      "passed": true,
+      "evidence": "dossier.md '## Identity header': '**Born:** 24 April 1973, Bombay (now Mumbai), Maharashtra, India'"
+    },
+    {
+      "text": "The Test batting row shows 200 matches and 15,921 runs",
+      "passed": true,
+      "evidence": "Batting table row: '| Tests | 200 | 329 | 33 | 15,921 | 248* | 53.78 | 54.08 | 51 | 68 |'"
+    },
+    {
+      "text": "The ODI batting row shows 463 matches and 18,426 runs",
+      "passed": true,
+      "evidence": "Batting table row: '| ODIs | 463 | 452 | 41 | 18,426 | 200* | 44.83 | 86.23 | 49 | 96 |'"
+    },
+    {
+      "text": "The dossier states 100 international centuries, broken down as 51 in Tests and 49 in ODIs",
+      "passed": true,
+      "evidence": "Records section: '**Most international hundreds — 100** (51 Test, 49 ODI)'; batting table 100 column shows 51 (Tests) and 49 (ODIs); 'All-format international aggregate: 664 matches, 34,357 runs, 100 hundreds.'"
+    },
+    {
+      "text": "The dossier states he retired from international cricket in November 2013 after his 200th Test against West Indies in Mumbai",
+      "passed": true,
+      "evidence": "Identity header 'Status: Retired ... 200th and final Test 14–16 November 2013 v West Indies at the Wankhede Stadium, Mumbai'; Career arc 'announced Test retirement on 10 October 2013 and played his 200th Test at the Wankhede on 14–16 November 2013, scoring 74 in his last innings.'"
+    },
+    {
+      "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+      "passed": true,
+      "evidence": "'## Attribute ratings (out of 10)' table with 8 rows (Technique 10/10, Consistency 9/10, Versatility 9/10, Big-match impact 8/10, Longevity 10/10, Bowling 5/10, Fielding 6/10, Captaincy 4/10), each with a populated 'Why' column, e.g. '| Captaincy and leadership | 4/10 | 4 wins in 25 Tests (16%) and 23 in 73 ODIs; resigned twice; ...'. Eight dimensions is within the 6–8 range."
+    },
+    {
+      "text": "Statistics are labelled as final career figures or carry an explicit as-of date with a named source",
+      "passed": true,
+      "evidence": "Identity header: '**Stats as of:** Final career figures (career ended 16 November 2013). Headline numbers taken from the ESPNcricinfo-sourced tables reproduced on Wikipedia (infobox dated 15 November 2013) and cricketweb.net StatsSpider, cross-checked against HowSTAT and ESPNcricinfo search-result snippets. Retrieved 15–16 November 2026.' Records section additionally carries 'Status checked 16 November 2026.'"
+    },
+    {
+      "text": "A numbered sources list gives at least three URLs",
+      "passed": true,
+      "evidence": "'## Sources' contains 20 numbered entries (1–20) with 43 http(s) URLs in total, each with an access date, e.g. '1. Wikipedia — \"Sachin Tendulkar\" ... https://en.wikipedia.org/wiki/Sachin_Tendulkar — accessed 15–16 Nov 2026.'"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  },
+  "timing": {
+    "total_tokens": 145511,
+    "duration_ms": 420037,
+    "total_duration_seconds": 420.0,
+    "note": "Run was interrupted twice by usage-limit resets; figures cover the final resumed segment only."
+  },
+  "claims": [
+    {
+      "claim": "255 international catches (playing-style section and Fielding rating row)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "The dossier's own fielding line gives 115 Test + 140 ODI + 1 T20I catches, which sums to 256, not 255. Internal arithmetic inconsistency; the without_skill run states 256."
+    },
+    {
+      "claim": "Test average 53.78 is 15,921 divided by 296 dismissals (329 innings minus 33 not-outs), truncated; HowSTAT rounds to 53.79",
+      "type": "factual",
+      "verified": true,
+      "evidence": "329 − 33 = 296; 15,921 / 296 = 53.787..., consistent with both 53.78 (truncated) and 53.79 (rounded)."
+    },
+    {
+      "claim": "ODI captaincy record 23 won / 43 lost / 1 tied / 6 no-result from 73 matches",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Components sum to 73 and 23/73 = 31.5% as stated. The executor flags in user_notes that Wikipedia's prose says '2 tied' (which does not sum); the split used rests on a Sportskeeda list. Arithmetic verified; the tie/NR split itself is not independently confirmed."
+    },
+    {
+      "claim": "ESPNcricinfo, HowSTAT and Cricbuzz could not be fetched (HTTP 403 / crawler block), so headline stats were taken from the ESPNcricinfo-sourced Wikipedia infobox and cricketweb.net StatsSpider",
+      "type": "process",
+      "verified": true,
+      "evidence": "Stated consistently in transcript.md and user_notes.md; the dossier's table notes and source 5/6 entries say 'via search snippets only (pages returned 403 on fetch)'. Transcript is a summary without a tool-call log, so the 403s themselves cannot be re-checked here, but the attribution is honest and consistent."
+    },
+    {
+      "claim": "First Test hundred — 119* at Old Trafford, 9 August 1990",
+      "type": "factual",
+      "verified": true,
+      "evidence": "9 August 1990 is the match start date (the convention used by Wikipedia's centuries list, cited as source 2). The innings concluded on the final day, 14 August 1990, which is the date the without_skill run gives. Both conventions are defensible; the dossier does not say which it uses."
+    },
+    {
+      "claim": "Joe Root reported to have passed Tendulkar's most-fourth-innings-Test-runs record in January 2026",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Cannot verify without web access. The without_skill run states this record fell in 2024. The two runs conflict; at most one is right. Flagged, not resolved."
+    },
+    {
+      "claim": "Padma Shri 1999",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Cannot verify here. The without_skill run gives Padma Shri (1998). Conflicting between runs; flagged."
+    },
+    {
+      "claim": "Dossier follows SKILL.md section order and includes eight attribute ratings, a parameters table, bowling table and captaincy record",
+      "type": "quality",
+      "verified": true,
+      "evidence": "dossier.md contains Identity header, Career statistics (batting + bowling tables, fielding, captaincy), Career arc, Playing style, Overall parameters table, Attribute ratings (8 rows), Records and milestones, After playing, Off-field and context, Sources — matching the transcript's description."
+    },
+    {
+      "claim": "Most Player of the Match awards in internationals — 76 — still stands (Kohli 71 per list updated 11 January 2026)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Rests on a Wikipedia table dated 11 January 2026; the executor itself flags in user_notes that Kohli has played ODIs since and the status should be rechecked. Not verifiable here."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "First-class and List A innings, not-outs, strike rate and all FC/List A bowling figures unavailable from fetchable sources; cells left blank / omitted",
+      "T20 (all) row (96 m, 2,797 runs, avg 32.90, SR 121.08) from secondary aggregators only, not cross-checked against ESPNcricinfo",
+      "IPL average 34.84 (HowSTAT snippet) vs 'just under 36' (Sportskeeda); IPL fifties count unknown",
+      "ODI captaincy tie/no-result split (1 tied, 6 NR) from a Sportskeeda list; Wikipedia prose says 2 tied and does not sum to 73",
+      "Test Player-of-the-Match count 13 vs 14 between two Wikipedia tables; 76 total used",
+      "Desert Storm 134 'in the final, on his 25th birthday' framing from general knowledge, not a fetched source",
+      "241* at Sydney cover-drive abstinence and 1998 Warne net preparation stated with 'reportedly'; not sourced in this run",
+      "'Passed Lara in October 2008' supported only by a Sportskeeda article title",
+      "ODI debut venue (Gujranwala) and T20I venue (Johannesburg) omitted as unconfirmed",
+      "2026 record-status items (Root fifties/fourth-innings runs, Kohli chases/15,000 ODI runs/86 hundreds) from news reports, not record pages; Kohli's figures will have moved",
+      "Most Player of the Match 'still stands' relies on a list dated 11 Jan 2026; recheck",
+      "Ferrari import-duty controversy not found in fetched sources; left unverified",
+      "Arjun Tendulkar at LSG (2026) from an aggregator snippet only",
+      "IML Season 2 postponement from a single Sportsdunia article of unknown date"
+    ],
+    "needs_review": [
+      "Captaincy ODI tie/NR split against Statsguru/HowSTAT",
+      "Current status of Most Player of the Match record vs Kohli",
+      "Kohli/Root current tallies before relying on 'still stands' claims"
+    ],
+    "workarounds": [
+      "ESPNcricinfo profile, legacy and stats URLs all returned 403; HowSTAT pages returned 403; Cricbuzz blocks the crawler. Used ESPNcricinfo-sourced Wikipedia infobox (15 Nov 2013) and cricketweb.net StatsSpider instead, with HowSTAT/ESPNcricinfo figures taken from search snippets",
+      "Statsguru not attempted given the ESPNcricinfo block; cricinfo.com legacy captains table redirect not followed",
+      "WebSearch/WebFetch hit usage limits twice mid-run; resumed after each reset. One batch of curl fallbacks via Bash was not executed (auto-mode classifier returned no verdict)",
+      "Retired player: used 'Final career figures' label instead of a stats-as-of date and replaced 'Recent form' with 'After playing', per the skill; no inline chart rendered"
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Statistics are labelled as final career figures or carry an explicit as-of date with a named source",
+        "reason": "This is satisfiable by a one-line document preamble ('Compiled <date>. Figures are from X') with no label on the statistics table itself, which is what the without_skill run did. If the skill's 'Stats as of:' line in the identity header is the intended behaviour, the assertion should require the label to sit in the identity header or immediately adjacent to the stats table, and for retired players should require the words 'final career figures' explicitly."
+      },
+      {
+        "assertion": "A numbered sources list gives at least three URLs",
+        "reason": "A bulleted list with exactly three URLs, where the other dozen entries name outlets without links, passes. Three URLs is a very low bar for a dossier with ~100 factual claims. Consider requiring that the headline statistics each cite a URL, or raising the minimum, or checking that the stats source named in the as-of line appears in the sources list."
+      },
+      {
+        "reason": "Assertions 1–5 (birth date/place, 200/15,921, 463/18,426, 100 = 51 + 49, November 2013 retirement) are well-known reference facts that any competent model reproduces from memory; both runs passed all five. They verify the executor did not hallucinate but do not discriminate skill vs no-skill. Only the ratings-table assertion separated the two runs in this case."
+      },
+      {
+        "reason": "No assertion checks internal consistency of the statistics. The with_skill dossier states '255 international catches' while its own fielding line (115 + 140 + 1) sums to 256. A check such as 'international catch total equals the sum of the per-format fielding figures' or 'the all-format aggregate (664 matches, 34,357 runs) equals the sum of the format rows' would catch this class of error."
+      },
+      {
+        "reason": "No assertion covers the bowling table, the captaincy record, the career-arc section or the playing-style profile, all of which the skill mandates and the with_skill run produced. If those are required outputs of the skill, at least one assertion should check for them (e.g. 'ODI bowling row shows 154 wickets and best 5/32')."
+      },
+      {
+        "reason": "The two runs disagree on at least two facts (year Root passed the fourth-innings-runs record: 2024 vs January 2026; Padma Shri year: 1998 vs 1999). No assertion checks either, and the grader cannot resolve them without web access. If record-status currency matters to this skill, an assertion pinning one such post-2013 fact would be discriminating."
+      }
+    ],
+    "overall": "All 8 assertions pass on substance, not surface compliance: the with_skill dossier has the required identity header, correctly populated stat rows, an 8-row ratings table with justifications, an explicit 'Final career figures' label with named sources, and 20 numbered sources with 43 URLs. The assertion set itself is weak at discriminating: five of eight are memorised-fact checks that both runs pass, and the as-of and sources assertions are satisfiable by minimal effort. One internal arithmetic error (255 vs 256 catches) and two cross-run factual conflicts went uncaught by the assertions."
+  }
+}

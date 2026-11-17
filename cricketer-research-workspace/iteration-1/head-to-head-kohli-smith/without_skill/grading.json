@@ -1,0 +1,129 @@
+{
+  "expectations": [
+    {
+      "text": "The document states the Smith compared is Steven Smith of Australia, not Graeme Smith of South Africa",
+      "passed": false,
+      "evidence": "The document never states which Smith is meant or rules out Graeme Smith. It is implicitly Steven Smith of Australia, but the assertion requires an explicit disambiguation."
+    },
+    {
+      "text": "A side-by-side Test table shows matches, runs and average for both Kohli and Smith",
+      "passed": true,
+      "evidence": "'Career summary, all formats' table has Kohli Tests / Smith Tests columns: Matches 123/127, Runs 9,230/11,003, Average 46.85/55.29."
+    },
+    {
+      "text": "Side-by-side ODI and T20I tables with figures for both players are also present",
+      "passed": true,
+      "evidence": "The same combined table has Kohli ODIs / Smith ODIs and Kohli T20Is / Smith T20Is columns with figures for both."
+    },
+    {
+      "text": "Both players' statistics carry the same as-of date and a named source",
+      "passed": false,
+      "evidence": "Sources are named (Cricinfo via Wikipedia, Cricket Australia), but dates differ (Smith 22 Oct, Kohli 4 Nov) and the document says Smith's Newlands Test scores could not be confirmed, so it concedes the two players' figures may not be current to the same date. The with_skill run found Smith missed that Test injured."
+    },
+    {
+      "text": "Both players are rated on the same set of attribute dimensions out of 10, with a justification per cell",
+      "passed": false,
+      "evidence": "No attribute ratings of any kind; the comparison is prose plus statistics tables."
+    },
+    {
+      "text": "A context section discusses factors that cut both ways, such as era, home versus away record, or bowling attacks faced",
+      "passed": true,
+      "evidence": "Home-and-away section discusses both directions in detail by host country; section 7 'The strongest case for Kohli' and the captaincy section argue the other side."
+    },
+    {
+      "text": "The verdict names one player as the better Test batter in its first sentence and gives reasons",
+      "passed": true,
+      "evidence": "'## Short answer' first sentence: 'Steve Smith is the better Test batter, by a clear margin.' Reasons follow."
+    },
+    {
+      "text": "The document states the conditions under which the verdict would flip",
+      "passed": false,
+      "evidence": "No flip conditions for the Test verdict. Section 7 argues Kohli's case 'does not survive'; the cross-format line is presented as a separate answer, not as a condition that changes the Test verdict."
+    },
+    {
+      "text": "The document notes Kohli's retirement from Test cricket in May 2025",
+      "passed": true,
+      "evidence": "Opening: 'Kohli's Test record is final: he retired from Tests in May 2025.'"
+    },
+    {
+      "text": "A numbered sources list gives at least three URLs",
+      "passed": true,
+      "evidence": "Sources section is a bulleted (not numbered) list of 28 linked URLs. Passed for consistency with the other cases' rubric (numbered or bulleted)."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 4,
+    "total": 10,
+    "pass_rate": 0.6
+  },
+  "timing": {
+    "total_tokens": 116562,
+    "duration_ms": 222859,
+    "total_duration_seconds": 222.9,
+    "note": "Run was interrupted several times by usage limits; figures cover the final resumed segment only."
+  },
+  "claims": [
+    {
+      "claim": "Smith's 37th Test hundred came at the SCG in Jan 2026",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Runs conflict: with_skill says 138 at the SCG closing the 2025-26 Ashes; without_skill says an unbeaten 129. Not resolvable from the files."
+    },
+    {
+      "claim": "Smith missed the third Test at Newlands (27-31 Oct 2026) with a neck injury",
+      "type": "factual",
+      "verified": true,
+      "evidence": "with_skill cites CricTracker and Outlook India reports; without_skill did not find this and treated his scores as unknown."
+    },
+    {
+      "claim": "Ratings total 66 each; Test rows 27-21 to Smith",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Kohli 8+6+7+10+9+9+8+9=66, Smith 9+9+9+6+8+9+9+7=66; first three rows 21 v 27."
+    },
+    {
+      "claim": "Smith's away Test average",
+      "type": "factual",
+      "verified": false,
+      "evidence": "with_skill 54.60 (Feb 2025 source); without_skill 53.82 (Oct 2026 report). The newer figure is in the baseline."
+    },
+    {
+      "claim": "Kohli Test captaincy 68 Tests, 40 won",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Baseline cites Outlook India; with_skill left it unconfirmed after failing to reach a stats source."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "ESPNcricinfo, Statsguru, HowSTAT and Cricbuzz refused automated access in both runs"
+    ],
+    "needs_review": [
+      "Smith's SCG 2026 score conflicts between runs"
+    ],
+    "workarounds": [
+      "Wikipedia infobox figures plus search snippets used in place of primary stats pages"
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The document states the Smith compared is Steven Smith of Australia, not Graeme Smith of South Africa",
+        "reason": "Rewards an explicit disambiguation line; the baseline picked the right player implicitly, so this measures template compliance more than correctness."
+      },
+      {
+        "assertion": "Both players' statistics carry the same as-of date and a named source",
+        "reason": "'Same as-of date' is too literal; better: 'both players' figures are stated to be current as of one named date, with any gap explained'."
+      },
+      {
+        "assertion": "A numbered sources list gives at least three URLs",
+        "reason": "Wording says numbered but grading accepts bulleted; align the text."
+      },
+      {
+        "reason": "No assertion checks a recent fact that changes the figures, such as Smith missing the Cape Town Test, which only the with_skill run found."
+      }
+    ],
+    "overall": "Assertions 2, 7 and 9 pass in both runs; the discriminating ones are ratings, flip conditions and disambiguation."
+  }
+}

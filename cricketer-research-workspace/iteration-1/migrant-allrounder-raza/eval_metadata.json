@@ -1,0 +1,14 @@
+{
+  "eval_name": "migrant-allrounder-raza",
+  "prompt": "I need a research dossier on Sikandar Raza for a piece I'm writing about cricketers who've played for a country they weren't born in",
+  "assertions": [
+    "The identity header states Sikandar Raza was born on 24 April 1986 in Sialkot, Pakistan, and plays for Zimbabwe",
+    "The dossier explains his path from Pakistan via Scotland to Zimbabwe, matching the user's stated angle",
+    "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+    "Franchise cricket is covered, naming at least two leagues or teams he has played for",
+    "Statistics carry an explicit as-of date and a named source",
+    "The dossier records his Zimbabwe T20I captaincy",
+    "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+    "A numbered sources list gives at least three URLs"
+  ]
+}

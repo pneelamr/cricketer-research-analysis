@@ -1,0 +1,665 @@
+{
+  "metadata": {
+    "skill_name": "cricketer-research",
+    "skill_path": "/Users/padmaneelamraju/My Drive/Cricketer Research Analysis/cricketer-research",
+    "executor_model": "claude-fable-5-1 (resumed segments partly on claude-opus-5-5)",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-11-17T12:36:28Z",
+    "evals_run": [
+      "head-to-head-kohli-smith",
+      "legend-profile-tendulkar",
+      "migrant-allrounder-raza",
+      "womens-allrounder-perry"
+    ],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": "head-to-head-kohli-smith",
+      "eval_name": "head-to-head-kohli-smith",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 369.8,
+        "tokens": 159179,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The document states the Smith compared is Steven Smith of Australia, not Graeme Smith of South Africa",
+          "passed": true,
+          "evidence": "Identity header: 'Disambiguation: this is Steven Smith born 1989. It is not Steven Barry Smith (Australia, three Tests in 1984) and not Graeme Smith of South Africa.'"
+        },
+        {
+          "text": "A side-by-side Test table shows matches, runs and average for both Kohli and Smith",
+          "passed": true,
+          "evidence": "'### Tests' table with Kohli and Smith columns: Matches 123/127, Runs 9,230/11,003, Average 46.85/55.29."
+        },
+        {
+          "text": "Side-by-side ODI and T20I tables with figures for both players are also present",
+          "passed": true,
+          "evidence": "Separate '### ODIs' (318/170 matches, 15,183/5,800 runs) and '### T20Is' (125/67, 4,188/1,094) side-by-side tables."
+        },
+        {
+          "text": "Both players' statistics carry the same as-of date and a named source",
+          "passed": true,
+          "evidence": "Question section: 'Stats as of 16 Nov 2026', source named (Wikipedia infoboxes citing ESPNcricinfo). Per-player snapshots differ (Kohli 4 Nov, Smith 22 Oct) but the document reconciles them: Smith missed the 27-31 Oct Cape Town Test, so his Test line is current as of 16 Nov."
+        },
+        {
+          "text": "Both players are rated on the same set of attribute dimensions out of 10, with a justification per cell",
+          "passed": true,
+          "evidence": "Attribute table with 8 shared dimensions; every cell has a score out of 10 and a sentence of evidence (e.g. Kohli technique 8/10 citing 12 of 15 2024 dismissals outside off)."
+        },
+        {
+          "text": "A context section discusses factors that cut both ways, such as era, home versus away record, or bowling attacks faced",
+          "passed": true,
+          "evidence": "'## Context that cuts both ways' covers home conditions, England, captaincy load, the 2018 ban year, era, unfinished career and format scope."
+        },
+        {
+          "text": "The verdict names one player as the better Test batter in its first sentence and gives reasons",
+          "passed": true,
+          "evidence": "Verdict first sentence: 'Steve Smith is the better Test batter, by a clear margin.' Followed by bulleted reasons (average, hundreds, home-away drop, England, decline phase)."
+        },
+        {
+          "text": "The document states the conditions under which the verdict would flip",
+          "passed": true,
+          "evidence": "'When the verdict would flip or narrow' lists four conditions: no format named, 2016-19 window only, captaincy counted, Smith's post-2025 away average."
+        },
+        {
+          "text": "The document notes Kohli's retirement from Test cricket in May 2025",
+          "passed": true,
+          "evidence": "Identity header: 'Tests: announced 12 May 2025. His last Test was 3 Jan 2025 v Australia.'"
+        },
+        {
+          "text": "A numbered sources list gives at least three URLs",
+          "passed": true,
+          "evidence": "'## Sources' is a numbered list of 32 entries, each with a URL and fetched/snippet marker."
+        }
+      ],
+      "notes": [
+        "ESPNcricinfo, Statsguru, HowSTAT and Cricbuzz refused automated access in both runs",
+        "Smith's SCG 2026 score conflicts between runs",
+        "Wikipedia infobox figures plus search snippets used in place of primary stats pages"
+      ]
+    },
+    {
+      "eval_id": "legend-profile-tendulkar",
+      "eval_name": "legend-profile-tendulkar",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 420.0,
+        "tokens": 145511,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The identity header states Tendulkar was born on 24 April 1973 in Mumbai (Bombay)",
+          "passed": true,
+          "evidence": "dossier.md '## Identity header': '**Born:** 24 April 1973, Bombay (now Mumbai), Maharashtra, India'"
+        },
+        {
+          "text": "The Test batting row shows 200 matches and 15,921 runs",
+          "passed": true,
+          "evidence": "Batting table row: '| Tests | 200 | 329 | 33 | 15,921 | 248* | 53.78 | 54.08 | 51 | 68 |'"
+        },
+        {
+          "text": "The ODI batting row shows 463 matches and 18,426 runs",
+          "passed": true,
+          "evidence": "Batting table row: '| ODIs | 463 | 452 | 41 | 18,426 | 200* | 44.83 | 86.23 | 49 | 96 |'"
+        },
+        {
+          "text": "The dossier states 100 international centuries, broken down as 51 in Tests and 49 in ODIs",
+          "passed": true,
+          "evidence": "Records section: '**Most international hundreds \u2014 100** (51 Test, 49 ODI)'; batting table 100 column shows 51 (Tests) and 49 (ODIs); 'All-format international aggregate: 664 matches, 34,357 runs, 100 hundreds.'"
+        },
+        {
+          "text": "The dossier states he retired from international cricket in November 2013 after his 200th Test against West Indies in Mumbai",
+          "passed": true,
+          "evidence": "Identity header 'Status: Retired ... 200th and final Test 14\u201316 November 2013 v West Indies at the Wankhede Stadium, Mumbai'; Career arc 'announced Test retirement on 10 October 2013 and played his 200th Test at the Wankhede on 14\u201316 November 2013, scoring 74 in his last innings.'"
+        },
+        {
+          "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+          "passed": true,
+          "evidence": "'## Attribute ratings (out of 10)' table with 8 rows (Technique 10/10, Consistency 9/10, Versatility 9/10, Big-match impact 8/10, Longevity 10/10, Bowling 5/10, Fielding 6/10, Captaincy 4/10), each with a populated 'Why' column, e.g. '| Captaincy and leadership | 4/10 | 4 wins in 25 Tests (16%) and 23 in 73 ODIs; resigned twice; ...'. Eight dimensions is within the 6\u20138 range."
+        },
+        {
+          "text": "Statistics are labelled as final career figures or carry an explicit as-of date with a named source",
+          "passed": true,
+          "evidence": "Identity header: '**Stats as of:** Final career figures (career ended 16 November 2013). Headline numbers taken from the ESPNcricinfo-sourced tables reproduced on Wikipedia (infobox dated 15 November 2013) and cricketweb.net StatsSpider, cross-checked against HowSTAT and ESPNcricinfo search-result snippets. Retrieved 15\u201316 November 2026.' Records section additionally carries 'Status checked 16 November 2026.'"
+        },
+        {
+          "text": "A numbered sources list gives at least three URLs",
+          "passed": true,
+          "evidence": "'## Sources' contains 20 numbered entries (1\u201320) with 43 http(s) URLs in total, each with an access date, e.g. '1. Wikipedia \u2014 \"Sachin Tendulkar\" ... https://en.wikipedia.org/wiki/Sachin_Tendulkar \u2014 accessed 15\u201316 Nov 2026.'"
+        }
+      ],
+      "notes": [
+        "First-class and List A innings, not-outs, strike rate and all FC/List A bowling figures unavailable from fetchable sources; cells left blank / omitted",
+        "T20 (all) row (96 m, 2,797 runs, avg 32.90, SR 121.08) from secondary aggregators only, not cross-checked against ESPNcricinfo",
+        "IPL average 34.84 (HowSTAT snippet) vs 'just under 36' (Sportskeeda); IPL fifties count unknown",
+        "ODI captaincy tie/no-result split (1 tied, 6 NR) from a Sportskeeda list; Wikipedia prose says 2 tied and does not sum to 73",
+        "Test Player-of-the-Match count 13 vs 14 between two Wikipedia tables; 76 total used",
+        "Desert Storm 134 'in the final, on his 25th birthday' framing from general knowledge, not a fetched source",
+        "241* at Sydney cover-drive abstinence and 1998 Warne net preparation stated with 'reportedly'; not sourced in this run",
+        "'Passed Lara in October 2008' supported only by a Sportskeeda article title",
+        "ODI debut venue (Gujranwala) and T20I venue (Johannesburg) omitted as unconfirmed",
+        "2026 record-status items (Root fifties/fourth-innings runs, Kohli chases/15,000 ODI runs/86 hundreds) from news reports, not record pages; Kohli's figures will have moved",
+        "Most Player of the Match 'still stands' relies on a list dated 11 Jan 2026; recheck",
+        "Ferrari import-duty controversy not found in fetched sources; left unverified",
+        "Arjun Tendulkar at LSG (2026) from an aggregator snippet only",
+        "IML Season 2 postponement from a single Sportsdunia article of unknown date",
+        "Captaincy ODI tie/NR split against Statsguru/HowSTAT",
+        "Current status of Most Player of the Match record vs Kohli",
+        "Kohli/Root current tallies before relying on 'still stands' claims",
+        "ESPNcricinfo profile, legacy and stats URLs all returned 403; HowSTAT pages returned 403; Cricbuzz blocks the crawler. Used ESPNcricinfo-sourced Wikipedia infobox (15 Nov 2013) and cricketweb.net StatsSpider instead, with HowSTAT/ESPNcricinfo figures taken from search snippets",
+        "Statsguru not attempted given the ESPNcricinfo block; cricinfo.com legacy captains table redirect not followed",
+        "WebSearch/WebFetch hit usage limits twice mid-run; resumed after each reset. One batch of curl fallbacks via Bash was not executed (auto-mode classifier returned no verdict)",
+        "Retired player: used 'Final career figures' label instead of a stats-as-of date and replaced 'Recent form' with 'After playing', per the skill; no inline chart rendered"
+      ]
+    },
+    {
+      "eval_id": "migrant-allrounder-raza",
+      "eval_name": "migrant-allrounder-raza",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 23.0,
+        "tokens": 139391,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The identity header states Sikandar Raza was born on 24 April 1986 in Sialkot, Pakistan, and plays for Zimbabwe",
+          "passed": true,
+          "evidence": "dossier.md has a '## Identity header' section (line 7). Line 10: '**Born:** 24 April 1986, Sialkot, Punjab, Pakistan (age 40)'. Line 11: '**Country / teams:** Zimbabwe (2013\u2013present)'."
+        },
+        {
+          "text": "The dossier explains his path from Pakistan via Scotland to Zimbabwe, matching the user's stated angle",
+          "passed": true,
+          "evidence": "Career arc bullets 'Sialkot to Harare' (PAF College, failed eyesight test, family emigrated to Zimbabwe 2002/03), 'A student cricketer, not a prospect' (BSc at Glasgow Caledonian, Weirs CC in Scotland), 'Domestic career while ineligible' and 'Citizenship and debut' (citizenship Sept 2011, debut 2013 at 27). Off-field section opens with 'The migration story, for your piece' and the parameters table adds an 'Eligibility path' row. Line 3 explicitly frames the dossier around the user's angle."
+        },
+        {
+          "text": "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+          "passed": true,
+          "evidence": "Two distinct tables under '## Career statistics': '**Batting**' (lines 22-27) with rows Tests 22/42/1,434/127/34.14/56.13/1/11, ODIs 162/153/4,824/141/37.39/85.53/7/27, T20Is 147/142/3,369/133*/26.11/136.51/2/17; '**Bowling**' (lines 31-36) with rows Tests 3,335 balls/40 wkts/7/113/44.55/3.20, ODIs 5,468/101/4/55/44.00/4.87, T20Is 2,496/116/5/18/25.41/7.08. List A and T20 (all) rows are absent and the dossier says so."
+        },
+        {
+          "text": "Franchise cricket is covered, naming at least two leagues or teams he has played for",
+          "passed": true,
+          "evidence": "Line 11 names Chittagong Vikings (BPL), Trinbago Knight Riders (CPL), Lahore Qalandars (PSL 2023\u201325), Punjab Kings (IPL 2023\u201324), Dambulla Sixers (LPL), Dubai Capitals (ILT20), Northamptonshire and Worcestershire (Blast), Paarl Royals (SA20 2026), Chitwan Rhinos (NPL 2026), Montreal Tigers, Tshwane Spartans. Career arc and Recent form sections detail the 2025 PSL final, SA20 2026 and the current NPL stint."
+        },
+        {
+          "text": "Statistics carry an explicit as-of date and a named source",
+          "passed": true,
+          "evidence": "Line 16: '**Stats as of:** 12 November 2026, ESPNcricinfo figures as carried by Wikipedia's infobox, cross-checked on 16 November 2026 against cricket.com.au (identical figures).' Table notes (lines 40-45) repeat the sourcing and name what could not be fetched."
+        },
+        {
+          "text": "The dossier records his Zimbabwe T20I captaincy",
+          "passed": true,
+          "evidence": "Line 15: 'Zimbabwe T20I captain (appointed late 2023); stand-in ODI captain September\u2013October 2026'. Line 137 'Captaincy' paragraph: 'T20I captain since late 2023 (Craig Ervine kept the ODI and Test captaincy...)'. Parameters table Role row: 'T20I captain'. Also stand-in T20I captaincy in 2015 and captaining the 2026 T20 World Cup side."
+        },
+        {
+          "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+          "passed": true,
+          "evidence": "'## Attribute ratings (out of 10)' (lines 84-96) is a three-column table (Dimension | Score | Why) with seven rows: Batting 7/10, Bowling 6/10, Match impact and balance 8/10, Versatility 7/10, Fielding 6/10, Durability 8/10, Leadership 6/10. Each row has a one-line justification citing figures (e.g. Bowling: 'Elite T20I returns (116 wickets at 25.41, economy 7.08) but fifth-bowler figures in ODIs and Tests (averages of 44 in both)'). An anchored scale is stated above the table."
+        },
+        {
+          "text": "A numbered sources list gives at least three URLs",
+          "passed": true,
+          "evidence": "'## Sources' (lines 147-175) is a numbered list 1-25, every entry carrying at least one URL (some carry two or three); well over 30 URLs in total, e.g. https://en.wikipedia.org/wiki/Sikandar_Raza, https://www.cricket.com.au/players/CA:1186/sikandar-raza, https://www.aljazeera.com/sports/2024/3/4/sikandar-raza-zimbabwe-pakistan-cricketer-icc-player-of-the-year-award-t20-world-cup."
+        }
+      ],
+      "notes": [
+        "First-class highest score: infobox 226 vs Wikipedia body text 146; left as '226 (unconfirmed)'",
+        "T20I best bowling 5/18 taken over cricket.com.au's 4/8; the match for 5/18 not confirmed",
+        "Family's move to Zimbabwe: 2002 (Wikipedia) vs 2003 (Al Jazeera, Zimbabwe Independent); reason undocumented",
+        "T20I captaincy appointment 'late 2023' inferred from a URL timestamp and a headline, article not read",
+        "ICC No. 1 ODI all-rounder Sept 2025 rests on a Wisden headline only; current Nov 2026 rankings unconfirmed",
+        "'Still stands' status of cited Zimbabwe records not re-checked",
+        "2026 T20 World Cup final placing, Australia ODI series results, UAE tri-series final, Worcestershire Blast returns, MLC Seattle Orcas stint all unverified",
+        "Zimbabwe cap numbers from Wikipedia infobox only",
+        "2022 T20 World Cup win over Pakistan (Perth): verification search cut off; omitted from records",
+        "List A and T20 (all matches) rows missing from statistics tables",
+        "Captaincy win-loss record not obtained; Leadership rating rests on documented results only",
+        "ICC T20I Team of the Year year(s) unconfirmed",
+        "Roughly 20 planned verification searches never executed due to usage-limit interruptions",
+        "ESPNcricinfo and HowSTAT returned 403, Cricbuzz blocked the crawler; statistics taken from Wikipedia's Cricinfo-credited infobox and cross-checked against cricket.com.au",
+        "ICC rankings pages and Wikipedia captains list blocked by the permission classifier; a curl attempt denied and not retried",
+        "Discarded Wikipedia body-text errors (youngest T20I fifty claim; 5 Nov 2013 T20I debut) in favour of infobox/cricket.com.au",
+        "Did not save the profiles/sikandar-raza.md copy the skill calls for, per task instructions",
+        "No inline chart tool used; ratings table stands alone"
+      ]
+    },
+    {
+      "eval_id": "womens-allrounder-perry",
+      "eval_name": "womens-allrounder-perry",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 60.1,
+        "tokens": 188870,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The dossier identifies Ellyse Perry as an Australian women's all-rounder born on 3 November 1990 in Sydney",
+          "passed": true,
+          "evidence": "Identity header: 'Born: 3 November 1990, Wahroonga, Sydney, New South Wales (age 36)'; 'Country / teams: Australia (2007\u2013)'; 'Role: Batting all-rounder \u2014 top-order right-hand batter ... and right-arm fast-medium bowler'."
+        },
+        {
+          "text": "The career arc mentions she also played football for Australia, including the 2011 Women's World Cup",
+          "passed": true,
+          "evidence": "Career arc, first bullet: 'She was simultaneously a footballer: 18 caps for the Matildas (2007\u201313), including the 2011 FIFA Women's World Cup, making her the first person to appear at both a cricket and a football World Cup.'"
+        },
+        {
+          "text": "The dossier states she made her Australian cricket debut in 2007 at age 16",
+          "passed": true,
+          "evidence": "Identity header: 'International debuts: ODI 22 July 2007 v New Zealand, aged 16'; career arc: '2007\u201308: debut at 16. Fast-tracked into the national side in July 2007'."
+        },
+        {
+          "text": "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+          "passed": true,
+          "evidence": "Two distinct tables under 'Career statistics': a '**Batting**' table (Tests 15/24/7/1,006/213*/59.17 ...; ODIs 171/143/48/4,691 ...; T20Is 184/126/44/2,558 ...) and a separate '**Bowling**' table (Tests 2,061 balls/851/39/6-32/21.82 ...; ODIs 5,836/4,253/167/7-22 ...; T20Is 2,495/2,430/131/4-12 ...). Both also carry WBBL and List A rows."
+        },
+        {
+          "text": "WBBL statistics or a dedicated WBBL section with figures is included, as the user asked",
+          "passed": true,
+          "evidence": "WBBL (Sydney Sixers) row in both tables: 150 M, 5,337 runs, HS 111, avg 49.42, SR 111.61, 3x100, 37x50, 67 ct; 73 wkts, 5/22, avg 32.36, econ 7.16. Plus a WBBL bullet under Records (777 in WBBL|04, 199* partnership, 32 PoM awards) and WBBL|11 / WBBL|12 entries under Recent form."
+        },
+        {
+          "text": "Statistics carry an explicit as-of date and a named source",
+          "passed": true,
+          "evidence": "Identity header: 'Stats as of: 15 November 2026, cricket.com.au player profile (international and WBBL tables), cross-checked against ESPNcricinfo figures dated 10 March 2026'; table note: 'International and WBBL rows are from cricket.com.au as of 15 Nov 2026'; List A row dated 10 March 2026 (ESPNcricinfo via Wikipedia)."
+        },
+        {
+          "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+          "passed": true,
+          "evidence": "'## Attribute ratings (out of 10)' table with 8 rows (Batting 9/10, Bowling (career) 8/10, Match impact and balance 9/10, Versatility 8/10, Fielding 8/10, Durability and longevity 9/10, Leadership 6/10, Consistency 8/10), each with a 'Why' cell citing figures, e.g. Leadership: 'Captained the Sixers for ten seasons with two titles ... but never Australia's permanent captain'."
+        },
+        {
+          "text": "A numbered sources list gives at least three URLs",
+          "passed": true,
+          "evidence": "'## Sources' is a numbered list 1\u201325 with 27 URLs (grep count), e.g. 1. https://www.cricket.com.au/players/CA:658/ellyse-perry, 3. https://en.wikipedia.org/wiki/Ellyse_Perry, 12. https://www.wisden.com/... Entry 25 bundles seven search snippets without URLs but the first 24 all carry links."
+        }
+      ],
+      "notes": [
+        "ODI and T20I runs/averages rest on cricket.com.au alone; cross-check is indirect (ESPNcricinfo snapshot of 10 Mar 2026 plus matches since).",
+        "WBBL row (150 M, 5,337 runs, 73 wkts) may or may not include the 15 Nov 2026 match v Renegades; treat as 'as of 12\u201315 Nov 2026'.",
+        "List A row is as of 10 Mar 2026 and excludes six later ODIs; no first-class or combined-T20 row because ESPNcricinfo was unreachable.",
+        "2025 ODI World Cup tournament aggregate not found; WPL match count/average/SR only from news snippets; Hundred career total only 'over 500' pre-2026.",
+        "Women's Ashes aggregate figures (1,552 runs; 71 wkts) are dated and below current totals.",
+        "WBBL|04 season record given as 777 (cricket.com.au) vs 778 (Wikipedia).",
+        "9/70 attribution to the 2015 Canterbury Test rests on Wikipedia narrative, not a scorecard.",
+        "'First cricketer of either sex to nine World Cups' and WPL 2027 availability are each single-sourced.",
+        "ICC rankings taken from Wikipedia's rankings page, not the ICC site.",
+        "Ashes Player of the Series years (2013-14, 2015, 2019) conflict with the without_skill run (2015, 2017-18, 2019).",
+        "WBBL balls-bowled cell left blank because the source shows overs as '329.23'.",
+        "Several recent-form innings (WI ODIs, 1st Bangladesh ODI, 2nd NZ T20I, four WBBL|12 games) were not found and are omitted.",
+        "cricket.com.au player profile substituted for ESPNcricinfo (HTTP 403 on every variant); Wikipedia infobox used as the cross-check.",
+        "Balls bowled and bowling strike rates converted from published overs.",
+        "Wikipedia 'ICC Women's Player Rankings' used because the ICC rankings page loads dynamically.",
+        "Style section built from ESPNcricinfo/Wisden/cricket.com.au articles because The Cricketer profile returned 403.",
+        "No home/away, by-year or captaincy splits because Statsguru was unreachable."
+      ]
+    },
+    {
+      "eval_id": "head-to-head-kohli-smith",
+      "eval_name": "head-to-head-kohli-smith",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 6,
+        "failed": 4,
+        "total": 10,
+        "time_seconds": 222.9,
+        "tokens": 116562,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The document states the Smith compared is Steven Smith of Australia, not Graeme Smith of South Africa",
+          "passed": false,
+          "evidence": "The document never states which Smith is meant or rules out Graeme Smith. It is implicitly Steven Smith of Australia, but the assertion requires an explicit disambiguation."
+        },
+        {
+          "text": "A side-by-side Test table shows matches, runs and average for both Kohli and Smith",
+          "passed": true,
+          "evidence": "'Career summary, all formats' table has Kohli Tests / Smith Tests columns: Matches 123/127, Runs 9,230/11,003, Average 46.85/55.29."
+        },
+        {
+          "text": "Side-by-side ODI and T20I tables with figures for both players are also present",
+          "passed": true,
+          "evidence": "The same combined table has Kohli ODIs / Smith ODIs and Kohli T20Is / Smith T20Is columns with figures for both."
+        },
+        {
+          "text": "Both players' statistics carry the same as-of date and a named source",
+          "passed": false,
+          "evidence": "Sources are named (Cricinfo via Wikipedia, Cricket Australia), but dates differ (Smith 22 Oct, Kohli 4 Nov) and the document says Smith's Newlands Test scores could not be confirmed, so it concedes the two players' figures may not be current to the same date. The with_skill run found Smith missed that Test injured."
+        },
+        {
+          "text": "Both players are rated on the same set of attribute dimensions out of 10, with a justification per cell",
+          "passed": false,
+          "evidence": "No attribute ratings of any kind; the comparison is prose plus statistics tables."
+        },
+        {
+          "text": "A context section discusses factors that cut both ways, such as era, home versus away record, or bowling attacks faced",
+          "passed": true,
+          "evidence": "Home-and-away section discusses both directions in detail by host country; section 7 'The strongest case for Kohli' and the captaincy section argue the other side."
+        },
+        {
+          "text": "The verdict names one player as the better Test batter in its first sentence and gives reasons",
+          "passed": true,
+          "evidence": "'## Short answer' first sentence: 'Steve Smith is the better Test batter, by a clear margin.' Reasons follow."
+        },
+        {
+          "text": "The document states the conditions under which the verdict would flip",
+          "passed": false,
+          "evidence": "No flip conditions for the Test verdict. Section 7 argues Kohli's case 'does not survive'; the cross-format line is presented as a separate answer, not as a condition that changes the Test verdict."
+        },
+        {
+          "text": "The document notes Kohli's retirement from Test cricket in May 2025",
+          "passed": true,
+          "evidence": "Opening: 'Kohli's Test record is final: he retired from Tests in May 2025.'"
+        },
+        {
+          "text": "A numbered sources list gives at least three URLs",
+          "passed": true,
+          "evidence": "Sources section is a bulleted (not numbered) list of 28 linked URLs. Passed for consistency with the other cases' rubric (numbered or bulleted)."
+        }
+      ],
+      "notes": [
+        "ESPNcricinfo, Statsguru, HowSTAT and Cricbuzz refused automated access in both runs",
+        "Smith's SCG 2026 score conflicts between runs",
+        "Wikipedia infobox figures plus search snippets used in place of primary stats pages"
+      ]
+    },
+    {
+      "eval_id": "legend-profile-tendulkar",
+      "eval_name": "legend-profile-tendulkar",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.875,
+        "passed": 7,
+        "failed": 1,
+        "total": 8,
+        "time_seconds": 227.0,
+        "tokens": 122511,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The identity header states Tendulkar was born on 24 April 1973 in Mumbai (Bombay)",
+          "passed": true,
+          "evidence": "dossier.md '## 1. At a glance' table (the document's identity header): '| Born | 24 April 1973, Bombay (Mumbai), Maharashtra, India |'"
+        },
+        {
+          "text": "The Test batting row shows 200 matches and 15,921 runs",
+          "passed": true,
+          "evidence": "Section 4 'International' table row: '| Tests | 200 | 329 | 15,921 | 53.78 | ~54 | 51 | 68 | 248* | 46 | 3/10 | 115 |'"
+        },
+        {
+          "text": "The ODI batting row shows 463 matches and 18,426 runs",
+          "passed": true,
+          "evidence": "Section 4 'International' table row: '| ODIs | 463 | 452 | 18,426 | 44.83 | ~86 | 49 | 96 | 200* | 154 | 5/32 | 140 |'"
+        },
+        {
+          "text": "The dossier states 100 international centuries, broken down as 51 in Tests and 49 in ODIs",
+          "passed": true,
+          "evidence": "International table 100s column: Tests 51, ODIs 49, T20Is 0, Total 100. At a glance: '664 matches, 34,357 runs, 100 centuries, 201 wickets'; Records: 'most Test centuries (51)', 'Most ODI centuries (49)', 'most international centuries (100)'."
+        },
+        {
+          "text": "The dossier states he retired from international cricket in November 2013 after his 200th Test against West Indies in Mumbai",
+          "passed": true,
+          "evidence": "Phase 5: '10 October 2013: announced he would retire after the two-Test home series v West Indies, which the BCCI scheduled in Kolkata and Mumbai so his 200th Test would be at the Wankhede.' and '14\u201316 November 2013: 200th Test. Scored 74 in his final innings'. At a glance: 'International span | 15 November 1989 to 16 November 2013'; 'Current status | Retired'."
+        },
+        {
+          "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+          "passed": false,
+          "evidence": "No ratings table exists. grep for '/10' or 'out of 10' matches only the bowling best figure '3/10' in the stats table. Section 7 'Batting style and technique' is prose bullets and section 13 'Assessment' is narrative prose; neither assigns numeric scores to dimensions. A prose discussion of strengths does not satisfy this assertion."
+        },
+        {
+          "text": "Statistics are labelled as final career figures or carry an explicit as-of date with a named source",
+          "passed": true,
+          "evidence": "Document preamble, immediately under the title: 'Compiled 16 November 2026. Figures are from ESPNcricinfo and Wikipedia unless noted; 2023\u20132026 items were checked against news reports listed in the Sources section.' This gives an explicit date and named sources that govern all figures in the document. Records lists additionally say 'as of November 2026'. Note this is weaker than a stats-specific label: the section 4 statistics tables themselves carry no 'final career figures' wording or as-of line, and 'Compiled' is a document date rather than a data-currency date. Passed on the coordinator's criterion (explicit date + named source); see eval_feedback."
+        },
+        {
+          "text": "A numbered sources list gives at least three URLs",
+          "passed": true,
+          "evidence": "Section 14 'Sources and confidence notes' is a bulleted (not numbered) list; the coordinator allows bulleted. The bulleted lines contain exactly 3 URLs (https://sachintendulkar.com/news/, https://www.bcci.tv/news/article/sachin-tendulkar-honoured-with-lifetime-achievement-award-at-bcci-naman-awards-2025, https://www.outlookindia.com/sports/cricket/sachin-tendulkar-brand-value-kroll-2025-rankings), with two further URLs (ESPNcricinfo player page, Wikipedia article) in the section's prose intro \u2014 5 in the section overall. Threshold of three met, but only just, and most of the ~20 bulleted entries name outlets (e.g. 'Scroll, Gulf News, Outlook India') without any link."
+        }
+      ],
+      "notes": [
+        "No user_notes.md was produced by this run; the following are taken from the dossier's own 'Confidence flags' and the transcript.",
+        "Root's 14,278 Test runs and Kohli's 55 ODI / 86 international centuries are the latest found and may have moved in recent weeks",
+        "England's 2028 Test tour of India comes from a single secondary source",
+        "US$170m net-worth figure is unattributed in its source; the Kroll US$125.9m brand value is the defensible number",
+        "Recykal investment is a company press release with no amount disclosed",
+        "Arjun Tendulkar's LSG transfer terms differ between the club statement (\u20b930 lakh trade) and press reports (swap deal)",
+        "Identity of his only T20I wicket (Justin Kemp) rests on two secondary sources; scorecard not read",
+        "England-in-India 2028 date against the ICC FTP / board announcements",
+        "Root and Kohli current tallies before relying on 'records under threat' section",
+        "Work was interrupted twice by usage-limit resets; interrupted requests were re-issued once and succeeded (per transcript)"
+      ]
+    },
+    {
+      "eval_id": "migrant-allrounder-raza",
+      "eval_name": "migrant-allrounder-raza",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 6,
+        "failed": 2,
+        "total": 8,
+        "time_seconds": 16.5,
+        "tokens": 137145,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The identity header states Sikandar Raza was born on 24 April 1986 in Sialkot, Pakistan, and plays for Zimbabwe",
+          "passed": true,
+          "evidence": "No section is labelled 'Identity header'; the equivalent is the '## 2. Vital facts' table near the top. Line 22: 'Born | 24 April 1986, Sialkot, Punjab, Pakistan | solid'. Line 33: 'Current roles | Zimbabwe T20I captain; ...'. Line 32: 'International debut | ODI, 3 May 2013 v Bangladesh (116th Zimbabwe ODI cap)'. Passed on content; the section label differs."
+        },
+        {
+          "text": "The dossier explains his path from Pakistan via Scotland to Zimbabwe, matching the user's stated angle",
+          "passed": true,
+          "evidence": "Section 1 summarises the sequence (Sialkot birth, PAF pilot ambition, failed eyesight test, emigration to Zimbabwe c. 2002, software engineering at Glasgow, Scottish club cricket, return to Harare, 2009 trial year). Section 3 timeline dates each step. Section 4 'The migration and citizenship story (the core of your piece)' covers the eligibility wait, the dual-nationality question and the Antum Naqvi parallel. Section 14 lists angles for the piece."
+        },
+        {
+          "text": "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+          "passed": false,
+          "evidence": "Section 7 'Career record' has a single combined table (lines 118-123) with columns 'Format | M | Runs | Avg | 100/50 | HS | Wkts | Bowl avg | BBI | 5WI'. Batting and bowling figures share one table; there is no separate bowling table or clearly separated bowling block. The combined table does hold Tests, ODIs and T20Is rows with numbers, but the assertion requires two distinct tables."
+        },
+        {
+          "text": "Franchise cricket is covered, naming at least two leagues or teams he has played for",
+          "passed": true,
+          "evidence": "Section 10 'Franchise and overseas career' (line 161) names Karachi Kings and Lahore Qalandars (PSL), Punjab Kings (IPL), Montreal Tigers (GT20 Canada), Tshwane Spartans (MSL), Chittagong Vikings and Rangpur Riders (BPL), Trinbago Knight Riders and St Lucia Kings (CPL), Dubai Capitals (ILT20), Dambulla Sixers (LPL), Northamptonshire, Manchester Originals, Worcestershire Rapids. Note: omits Paarl Royals (SA20 2026) and Chitwan Rhinos (NPL, Nov 2026), which the other run documents."
+        },
+        {
+          "text": "Statistics carry an explicit as-of date and a named source",
+          "passed": true,
+          "evidence": "Line 116: 'International figures below are the Wikipedia infobox numbers sourced to ESPNcricinfo, stated as of 12 November 2026.' Line 125 adds an ICC cross-check dated 19 July 2026. Section 15 item 9 repeats: 'ESPNcricinfo-sourced numbers dated 12 November 2026'."
+        },
+        {
+          "text": "The dossier records his Zimbabwe T20I captaincy",
+          "passed": true,
+          "evidence": "Section 9 'Captaincy' (line 153): 'Appointed T20I captain November 2023 after the 3-2 home loss to Namibia; Craig Ervine retained Tests and ODIs.' Line 66: '10 July 2026 ZC confirms Richard Ngarava as Test and ODI captain..., Raza retained as T20I captain.' Vital facts line 33: 'Zimbabwe T20I captain'. Source list includes the ESPNcricinfo Nov 2023 appointment story."
+        },
+        {
+          "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+          "passed": false,
+          "evidence": "No ratings table exists anywhere in the 16 sections. The only tables are 'Vital facts' (item/detail/confidence) and the combined career-record table. Strengths are discussed only in prose (sections 8, 14), which does not satisfy the assertion."
+        },
+        {
+          "text": "A numbered sources list gives at least three URLs",
+          "passed": true,
+          "evidence": "Section 16 'Sources' (lines 229-272) is a bulleted list, not numbered, split into 'Retrieved and used directly' (10 entries, 11 URLs) and 'Located via search' (29 entries, 29 URLs): 40 URLs in total. Passed under the grading instruction to count URLs in a numbered or bulleted list; the literal 'numbered' requirement is not met."
+        }
+      ],
+      "notes": [
+        "Year of emigration: 2002 vs 2003 vs 2001",
+        "Citizenship date: September 2011 vs resolved shortly before May 2013 debut",
+        "Whether he renounced Pakistani citizenship: not found",
+        "Why the family moved to Zimbabwe: not found",
+        "PAF College duration/age conflict",
+        "2009 'one-year trial' vs April 2007 first-class debut",
+        "T20I debut 11 May 2013 vs 5 November 2013",
+        "Family names from aggregator sites disagree",
+        "2026 T20 World Cup v South Africa venue unconfirmed",
+        "PSL 2025 final opponent and 22* off 7 are from memory",
+        "Mr Bean / Mnangagwa tweet after Perth 2022 is from memory",
+        "Several key pieces blocked or headline-only: ESPNcricinfo profile and features, Zimbabwe Independent op-ed, Chronicle piece, Herald 2011 eligibility story, The Standard 2013 and 2018 interviews, Sunday News interview, Dhaka Tribune and TNS interviews",
+        "Peer comparisons in Section 14 marked [memory, verify each]",
+        "Statistics taken from the Wikipedia infobox (ESPNcricinfo-sourced) with an ICC July 2026 cap count shown alongside, because ESPNcricinfo blocked fetching",
+        "Confidence tags ([solid]/[single]/[conflict]/[memory]) used throughout in place of a verification pass that was cut short by usage limits"
+      ]
+    },
+    {
+      "eval_id": "womens-allrounder-perry",
+      "eval_name": "womens-allrounder-perry",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 6,
+        "failed": 2,
+        "total": 8,
+        "time_seconds": 369.1,
+        "tokens": 157477,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The dossier identifies Ellyse Perry as an Australian women's all-rounder born on 3 November 1990 in Sydney",
+          "passed": true,
+          "evidence": "Snapshot table: 'Born | 3 November 1990, Wahroonga, Sydney, NSW (age 36)'; 'Role | All-rounder: right-hand top-order batter, right-arm fast-medium'; 'Current teams | Australia; ...'; headline line calls her 'the most-capped Australian woman in history'."
+        },
+        {
+          "text": "The career arc mentions she also played football for Australia, including the 2011 Women's World Cup",
+          "passed": true,
+          "evidence": "The '## 7. Career arc' section says 'ODI debut at 16 in July 2007; Matildas debut two weeks later' (football for Australia) but does not itself name the 2011 World Cup. The 2011 World Cup is stated elsewhere in the dossier: Snapshot ('18 football caps (3 goals) for the Matildas, 2007-2012, including a 2011 World Cup goal'), Records ('First Australian to play in both an ICC World Cup and a FIFA World Cup (2011)') and a dedicated '## 8. Football career' section ('Australia's only goal in the 3-1 quarter-final loss to Sweden at the 2011 World Cup (9 July 2011)'). Passed because the dossier states both facts and the dedicated football section functions as part of the career narrative; the section-placement ambiguity is raised in eval_feedback."
+        },
+        {
+          "text": "The dossier states she made her Australian cricket debut in 2007 at age 16",
+          "passed": true,
+          "evidence": "Snapshot: 'International debut | ODI v New Zealand, Darwin, 22 July 2007 (aged 16, before finishing school)'; Career arc: 'ODI debut at 16 in July 2007'."
+        },
+        {
+          "text": "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+          "passed": true,
+          "evidence": "Section 2 has '### Batting and fielding' (Tests 15/24/7/1,006/213*/59.17/46.81 ...; ODIs 171/143/48/4,691 ...; T20Is 184/126/44/2,558 ...) and a separate '### Bowling' table (Tests 343.3 ov/851/39/6-32/21.82/2.47 ...; ODIs 972.4/4,253/167/7-22 ...; T20Is 415.5/2,430/131/4-12 ...)."
+        },
+        {
+          "text": "WBBL statistics or a dedicated WBBL section with figures is included, as the user asked",
+          "passed": true,
+          "evidence": "'## 3. WBBL (Sydney Sixers, WBBL|01 to WBBL|12)' with career batting (150 M, 5,337 runs, HS 111, avg 49.42, SR 111.61, 67 ct) and bowling (329.3 ov, 73 wkts, 5/22, 32.36, 7.16) tables, plus a season-by-season table from WBBL|01 to WBBL|12 and a pre/post WBBL|08 strike-rate comparison."
+        },
+        {
+          "text": "Statistics carry an explicit as-of date and a named source",
+          "passed": true,
+          "evidence": "Preamble: 'Compiled 16 November 2026. Statistics are current through the Australia v New Zealand T20Is (22 Oct 2026) and the WBBL|12 matches played to mid-November 2026'; Section 2: 'Source: Cricket Australia player page (cricket.com.au, retrieved 16 Nov 2026)'; Section 3 repeats the source and retrieval date; the Section 4 table carries an explicit 'As of' column per row."
+        },
+        {
+          "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+          "passed": false,
+          "evidence": "No attribute ratings table exists. The only out-of-10 figure in the file is a prose mention in the career arc: 'Wisden rated her 9/10 for the tournament.' Strengths and weaknesses are discussed in prose (e.g. the WBBL strike-rate rebuild) but no dimensions are scored."
+        },
+        {
+          "text": "A numbered sources list gives at least three URLs",
+          "passed": false,
+          "evidence": "No sources list of any kind; grep finds zero 'http' strings in the file. Section 10 'Data notes and caveats' names sources in prose (Cricket Australia player page, ESPNcricinfo, ICC, cricket.com.au, Wisden, Wikipedia) without URLs or numbering."
+        }
+      ],
+      "notes": [
+        "No user_notes.md was produced. Caveats are embedded in dossier Section 10: WBBL match count 149 or 150; 2025 ODI World Cup totals not retrievable; Hundred career total (~768) is derived, not official; WNCL and Australian T20 Cup rows are as of April 2024; 6/15 'best in WPL history' not re-verified against WPL 2026; Matildas caps 16 vs 18 across sources.",
+        "Internal date error: Renegades fixture described as 'Sunday 16 Nov' (a Monday) in Section 3 while the season table dates it 12 Nov.",
+        "Ashes Player of the Series years, 2026 T20 World Cup bowling figures and the Feb 2027 schedule all conflict with the with_skill run.",
+        "No URLs anywhere, so none of the figures can be traced to a page.",
+        "Cricket Australia player page used as the statistics source because ESPNcricinfo and Cricbuzz could not be fetched; per-series deltas taken from ICC, cricket.com.au, Wisden and match reports to reconcile against the 10 Mar 2026 baseline."
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 218.225,
+        "stddev": 205.5922,
+        "min": 23.0,
+        "max": 420.0
+      },
+      "tokens": {
+        "mean": 158237.75,
+        "stddev": 22033.2389,
+        "min": 139391,
+        "max": 188870
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.7438,
+        "stddev": 0.1125,
+        "min": 0.6,
+        "max": 0.875
+      },
+      "time_seconds": {
+        "mean": 208.875,
+        "stddev": 145.1498,
+        "min": 16.5,
+        "max": 369.1
+      },
+      "tokens": {
+        "mean": 133423.75,
+        "stddev": 18219.159,
+        "min": 116562,
+        "max": 157477
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.26",
+      "time_seconds": "+9.3",
+      "tokens": "+24814"
+    }
+  },
+  "notes": [
+    "Time and token figures are not comparable between runs. Every run was cut off several times by usage limits, and timing.json captures only the final resumed segment.",
+    "The attribute ratings assertion failed in all four baselines and passed in all four skill runs. It is the single biggest source of the pass-rate gap.",
+    "Identity facts that the model knows from memory (Tendulkar's birth date, 200 Tests, Perry's 2007 debut) passed in both configurations and do not discriminate.",
+    "ESPNcricinfo profile pages, Statsguru, HowSTAT and Cricbuzz refused WebFetch in every run. Skill runs fell back to Wikipedia infoboxes, cricket.com.au player pages and search snippets, but the skill's sources reference still points first to the blocked sites.",
+    "Baselines were sometimes richer on the user's specific angle: the Raza baseline had sourced identity quotes and the 2022 Perth win over Pakistan; the Kohli baseline had Kohli's captaincy record and a newer Smith away average.",
+    "Skill outputs carried two accuracy slips the assertions missed: Tendulkar's catches stated as 255 against parts summing to 256, and Raza's citizenship date stated as fact where sources disagree."
+  ]
+}

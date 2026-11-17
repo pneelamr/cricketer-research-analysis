@@ -1,0 +1,16 @@
+{
+  "eval_name": "head-to-head-kohli-smith",
+  "prompt": "Compare Virat Kohli and Steve Smith across formats. Who's the better Test batter?",
+  "assertions": [
+    "The document states the Smith compared is Steven Smith of Australia, not Graeme Smith of South Africa",
+    "A side-by-side Test table shows matches, runs and average for both Kohli and Smith",
+    "Side-by-side ODI and T20I tables with figures for both players are also present",
+    "Both players' statistics carry the same as-of date and a named source",
+    "Both players are rated on the same set of attribute dimensions out of 10, with a justification per cell",
+    "A context section discusses factors that cut both ways, such as era, home versus away record, or bowling attacks faced",
+    "The verdict names one player as the better Test batter in its first sentence and gives reasons",
+    "The document states the conditions under which the verdict would flip",
+    "The document notes Kohli's retirement from Test cricket in May 2025",
+    "A numbered sources list gives at least three URLs"
+  ]
+}

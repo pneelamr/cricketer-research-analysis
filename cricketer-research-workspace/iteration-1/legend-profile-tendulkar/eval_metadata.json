@@ -1,0 +1,14 @@
+{
+  "eval_name": "legend-profile-tendulkar",
+  "prompt": "Research Sachin Tendulkar",
+  "assertions": [
+    "The identity header states Tendulkar was born on 24 April 1973 in Mumbai (Bombay)",
+    "The Test batting row shows 200 matches and 15,921 runs",
+    "The ODI batting row shows 463 matches and 18,426 runs",
+    "The dossier states 100 international centuries, broken down as 51 in Tests and 49 in ODIs",
+    "The dossier states he retired from international cricket in November 2013 after his 200th Test against West Indies in Mumbai",
+    "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+    "Statistics are labelled as final career figures or carry an explicit as-of date with a named source",
+    "A numbered sources list gives at least three URLs"
+  ]
+}

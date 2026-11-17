@@ -1,0 +1,6 @@
+{
+  "total_tokens": 122511,
+  "duration_ms": 227033,
+  "total_duration_seconds": 227.0,
+  "note": "Run was interrupted twice by usage-limit resets; figures cover the final resumed segment only."
+}

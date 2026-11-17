@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: legend-profile-tendulkar
+expected_outcome: |
+  A full single-player dossier on Sachin Tendulkar with a verified identity header (born 24 April 1973, Mumbai; retired November 2013), batting tables for Tests, ODIs and T20Is with correct final career figures (200 Tests, 463 ODIs, 1 T20I, 100 international centuries), a career arc, playing-style profile, parameters table, attribute ratings out of 10 with one-line justifications, records, and a numbered source list with URLs.

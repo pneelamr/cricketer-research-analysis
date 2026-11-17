@@ -1,0 +1,154 @@
+{
+  "expectations": [
+    {
+      "text": "The dossier identifies Ellyse Perry as an Australian women's all-rounder born on 3 November 1990 in Sydney",
+      "passed": true,
+      "evidence": "Snapshot table: 'Born | 3 November 1990, Wahroonga, Sydney, NSW (age 36)'; 'Role | All-rounder: right-hand top-order batter, right-arm fast-medium'; 'Current teams | Australia; ...'; headline line calls her 'the most-capped Australian woman in history'."
+    },
+    {
+      "text": "The career arc mentions she also played football for Australia, including the 2011 Women's World Cup",
+      "passed": true,
+      "evidence": "The '## 7. Career arc' section says 'ODI debut at 16 in July 2007; Matildas debut two weeks later' (football for Australia) but does not itself name the 2011 World Cup. The 2011 World Cup is stated elsewhere in the dossier: Snapshot ('18 football caps (3 goals) for the Matildas, 2007-2012, including a 2011 World Cup goal'), Records ('First Australian to play in both an ICC World Cup and a FIFA World Cup (2011)') and a dedicated '## 8. Football career' section ('Australia's only goal in the 3-1 quarter-final loss to Sweden at the 2011 World Cup (9 July 2011)'). Passed because the dossier states both facts and the dedicated football section functions as part of the career narrative; the section-placement ambiguity is raised in eval_feedback."
+    },
+    {
+      "text": "The dossier states she made her Australian cricket debut in 2007 at age 16",
+      "passed": true,
+      "evidence": "Snapshot: 'International debut | ODI v New Zealand, Darwin, 22 July 2007 (aged 16, before finishing school)'; Career arc: 'ODI debut at 16 in July 2007'."
+    },
+    {
+      "text": "Separate batting and bowling tables each contain Tests, ODIs and T20Is rows with numeric values",
+      "passed": true,
+      "evidence": "Section 2 has '### Batting and fielding' (Tests 15/24/7/1,006/213*/59.17/46.81 ...; ODIs 171/143/48/4,691 ...; T20Is 184/126/44/2,558 ...) and a separate '### Bowling' table (Tests 343.3 ov/851/39/6-32/21.82/2.47 ...; ODIs 972.4/4,253/167/7-22 ...; T20Is 415.5/2,430/131/4-12 ...)."
+    },
+    {
+      "text": "WBBL statistics or a dedicated WBBL section with figures is included, as the user asked",
+      "passed": true,
+      "evidence": "'## 3. WBBL (Sydney Sixers, WBBL|01 to WBBL|12)' with career batting (150 M, 5,337 runs, HS 111, avg 49.42, SR 111.61, 67 ct) and bowling (329.3 ov, 73 wkts, 5/22, 32.36, 7.16) tables, plus a season-by-season table from WBBL|01 to WBBL|12 and a pre/post WBBL|08 strike-rate comparison."
+    },
+    {
+      "text": "Statistics carry an explicit as-of date and a named source",
+      "passed": true,
+      "evidence": "Preamble: 'Compiled 16 November 2026. Statistics are current through the Australia v New Zealand T20Is (22 Oct 2026) and the WBBL|12 matches played to mid-November 2026'; Section 2: 'Source: Cricket Australia player page (cricket.com.au, retrieved 16 Nov 2026)'; Section 3 repeats the source and retrieval date; the Section 4 table carries an explicit 'As of' column per row."
+    },
+    {
+      "text": "An attribute ratings table scores six to eight dimensions out of 10, each with a one-line written justification",
+      "passed": false,
+      "evidence": "No attribute ratings table exists. The only out-of-10 figure in the file is a prose mention in the career arc: 'Wisden rated her 9/10 for the tournament.' Strengths and weaknesses are discussed in prose (e.g. the WBBL strike-rate rebuild) but no dimensions are scored."
+    },
+    {
+      "text": "A numbered sources list gives at least three URLs",
+      "passed": false,
+      "evidence": "No sources list of any kind; grep finds zero 'http' strings in the file. Section 10 'Data notes and caveats' names sources in prose (Cricket Australia player page, ESPNcricinfo, ICC, cricket.com.au, Wisden, Wikipedia) without URLs or numbering."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "timing": {
+    "total_tokens": 157477,
+    "duration_ms": 369110,
+    "total_duration_seconds": 369.1,
+    "note": "Run was interrupted twice by usage-limit resets; figures cover the final resumed segment only."
+  },
+  "claims": [
+    {
+      "claim": "Career aggregate 370 matches, 8,255 runs, 337 wickets",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Matches the sums of the format rows (15+171+184; 1,006+4,691+2,558; 39+167+131)."
+    },
+    {
+      "claim": "CA figures 'reconcile exactly' with the ESPNcricinfo baseline of 10 Mar 2026 (ODIs 165/4,504/166; T20Is 171/2,201/126) plus the WI tour, T20 World Cup, Bangladesh ODIs and NZ T20Is",
+      "type": "quality",
+      "verified": true,
+      "evidence": "ODIs: 165+3+3=171; 4,504+77+110=4,691; 166+0+1=167. T20Is: 171+3+7+3=184; 2,201+96+198+63=2,558; 126+1+4=131. The arithmetic holds for every cell."
+    },
+    {
+      "claim": "A cricket.com.au feature of 13 Nov 2026 described her 150th match as 'the Sunday 16 Nov fixture v Melbourne Renegades'",
+      "type": "factual",
+      "verified": false,
+      "evidence": "16 Nov 2026 is a Monday (15 Nov is the Sunday). The dossier's own season table dates the Renegades game 12 Nov at Junction Oval, and the with_skill user_notes place the Sixers' next game on 15 Nov. Internal date inconsistency."
+    },
+    {
+      "claim": "2026 T20 World Cup: 198 runs at 49.50, 4 wickets at 7.50, economy 6.00, best 2/9",
+      "type": "factual",
+      "verified": false,
+      "evidence": "198/4=49.5 and 30 runs/5 overs=6.00 are internally consistent, but the with_skill run reports a 2/14 spell v Bangladesh, which contradicts a best of 2/9. Cannot resolve offline."
+    },
+    {
+      "claim": "Women's Ashes Player of the Series: 2015, 2017-18, 2019",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Conflicts with the with_skill run (2013-14, 2015, 2019). Cannot verify offline."
+    },
+    {
+      "claim": "Inaugural Women's Champions Trophy in Sri Lanka, 14-28 Feb 2027, which she has said she is targeting",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Conflicts with the with_skill run's schedule (NZ T20Is at home from 21 Feb 2027, sourced to a cricket.com.au fixtures article). Cannot verify offline."
+    },
+    {
+      "claim": "WPL career: 25 matches, 972 runs at 64.80, 14 wickets at 30.86",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Presented as a table row without a source; the with_skill run found the same numbers only in news snippets and marked match count/average as unconfirmed. 972/64.80 implies 15 dismissals, plausible but unverified."
+    },
+    {
+      "claim": "Since WBBL|08: 1,987 runs at 49.35, SR 131.51; first seven seasons 50.16 at SR 102.75",
+      "type": "factual",
+      "verified": false,
+      "evidence": "No source given and not reproducible from the per-season figures in the dossier (WBBL|09 and most WBBL|12 innings are not itemised)."
+    },
+    {
+      "claim": "ESPNcricinfo, Cricbuzz, Cricketworld, Latestly, Lokmattimes and Canberra Times refused to fetch; several claims written from memory were removed before finalising",
+      "type": "process",
+      "verified": false,
+      "evidence": "The transcript file is only the executor's final report, so neither the fetch failures nor the removal of memory-based claims can be checked."
+    },
+    {
+      "claim": "Height 1.76 m, shirt No. 8, 329 runs between Test dismissals 2017-2019, Player of the Final at the 2013 ODI World Cup (3/19)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Unsourced details not present in the with_skill run; cannot verify offline."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "No user_notes.md was produced. Caveats are embedded in dossier Section 10: WBBL match count 149 or 150; 2025 ODI World Cup totals not retrievable; Hundred career total (~768) is derived, not official; WNCL and Australian T20 Cup rows are as of April 2024; 6/15 'best in WPL history' not re-verified against WPL 2026; Matildas caps 16 vs 18 across sources."
+    ],
+    "needs_review": [
+      "Internal date error: Renegades fixture described as 'Sunday 16 Nov' (a Monday) in Section 3 while the season table dates it 12 Nov.",
+      "Ashes Player of the Series years, 2026 T20 World Cup bowling figures and the Feb 2027 schedule all conflict with the with_skill run.",
+      "No URLs anywhere, so none of the figures can be traced to a page."
+    ],
+    "workarounds": [
+      "Cricket Australia player page used as the statistics source because ESPNcricinfo and Cricbuzz could not be fetched; per-series deltas taken from ICC, cricket.com.au, Wisden and match reports to reconcile against the 10 Mar 2026 baseline."
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The career arc mentions she also played football for Australia, including the 2011 Women's World Cup",
+        "reason": "'Career arc' is the skill's section name. The without_skill dossier states the Matildas debut inside its career-arc section but puts the 2011 World Cup in a separate 'Football career' section; I passed it on substance, but the assertion should say whether section placement matters (e.g. 'the dossier's career narrative mentions...') so graders are consistent."
+      },
+      {
+        "reason": "No assertion checks factual correctness of anything beyond birth and debut. The two runs disagree on checkable facts (Ashes Player of the Series years: 2013-14/2015/2019 vs 2015/2017-18/2019; 2026 T20 World Cup bowling: 2/14 v Bangladesh vs best 2/9; Feb 2027 fixtures), and the without_skill dossier calls 16 Nov 2026 a Sunday. One or two spot-check assertions on stable, well-known facts (213* v England Nov 2017; 7/22 v England Canterbury July 2019; ODI debut 22 July 2007 v NZ) would discriminate accuracy from fluent fabrication."
+      },
+      {
+        "assertion": "WBBL statistics or a dedicated WBBL section with figures is included, as the user asked",
+        "reason": "A single WBBL row with any number satisfies this. Both runs produced far more (career tables plus season detail), so it did not discriminate here; consider requiring at least career runs, average and wickets, or a dated WBBL figure."
+      },
+      {
+        "assertion": "Statistics carry an explicit as-of date and a named source",
+        "reason": "Passes for both runs, but it does not check that the date is on the actual statistics tables rather than only in a preamble, nor that the named source is a statistics page. Consider requiring the as-of date to sit with or beneath the batting/bowling tables."
+      },
+      {
+        "reason": "Timing data is not comparable: both timing.json files note the run was interrupted by usage limits and figures cover only the final resumed segment (with_skill 60 s vs without_skill 369 s). Any speed comparison drawn from these numbers would be misleading."
+      }
+    ],
+    "overall": "The structural assertions (ratings table, numbered URL sources) are the only ones that separated the runs; the content assertions passed for both. Add at least one accuracy check on a stable fact, and tighten 'career arc' so it is not tied to the skill's section naming."
+  }
+}
